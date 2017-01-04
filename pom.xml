@@ -8,11 +8,6 @@
   <packaging>pom</packaging>
   <name>com.wso2telco.dep.gw.mediation</name>
   <description>com.wso2telco.dep.gw.mediation</description>
-  <modules>
-    <module>com.wso2telco.dep.gw.smsapi</module>
-    <module>com.wso2telco.dep.gw.ussdapi</module>
-    
-  </modules>
   <build>
     <plugins>
       <plugin>
@@ -27,4 +22,11 @@
       </plugin>
     </plugins>
   </build>
+  <modules>
+  	<module>com.wso2telco.dep.gw.locationapi</module>
+  	
+  	<module>com.wso2telco.dep.gw.smsapi</module>
+  	<module>com.wso2telco.dep.gw.ussdapi</module>
+  	<module>com.wso2telco.dep.gw.paymentapi</module>
+  </modules>
 </project>

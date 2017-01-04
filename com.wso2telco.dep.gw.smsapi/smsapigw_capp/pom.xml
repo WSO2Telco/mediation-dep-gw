@@ -2,6 +2,11 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.wso2telco.dep.gw</groupId>
+    <artifactId>com.wso2telco.dep.gw.smsapi</artifactId>
+    <version>1.0.0</version>
+  </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>smsapigw_capp</artifactId>
   <version>1.0.0</version>
@@ -9,19 +14,202 @@
   <name>smsapigw_capp</name>
   <description>smsapigw_capp</description>
   <properties>
-    <com.wso2telco.dep.gw_._com.wso2telco.dep.gw.ussdapi.mediator>capp/EnterpriseServiceBus</com.wso2telco.dep.gw_._com.wso2telco.dep.gw.ussdapi.mediator>
-    <com.wso2telco.dep.gw.api_._SMSGWAPI>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._SMSGWAPI>
+    <com.wso2telco.dep.gw.sequence_._SMSRetrieveOutSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SMSRetrieveOutSeq>
+    <com.wso2telco.dep.gw.sequence_._ModifySMSNotificationSubscriptionRequestPayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifySMSNotificationSubscriptionRequestPayloadSeq>
+    <com.wso2telco.dep.gw.endpoint_._SMSQueryDeliveryStatusEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._SMSQueryDeliveryStatusEndpoint>
+    <com.wso2telco.dep.gw.sequence_._SendSMSDeliveryNotificationsSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SendSMSDeliveryNotificationsSeq>
+    <com.wso2telco.dep.gw.sequence_._SendSmsOutSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SendSmsOutSeq>
+    <com.wso2telco.dep.gw.endpoint_._SendSmsEp>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._SendSmsEp>
+    <com.wso2telco.dep.gw.sequence_._StoreSMSDeliverySubscriptionSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._StoreSMSDeliverySubscriptionSeq>
+    <com.wso2telco.dep.gw.sequence_._SubscribeToSMSDeliveryNotificationsSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SubscribeToSMSDeliveryNotificationsSeq>
+    <com.wso2telco.dep.gw.sequence_._StoreSMSNotificationSubscriptionSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._StoreSMSNotificationSubscriptionSeq>
+    <com.wso2telco.dep.gw.sequence_._SMSRetrieveSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SMSRetrieveSeq>
+    <com.wso2telco.dep.gw.sequence_._APIPropertySeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._APIPropertySeq>
+    <com.wso2telco.dep.gw.sequence_._ModifySMSNotificationSubscriptionResponsePayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifySMSNotificationSubscriptionResponsePayloadSeq>
+    <com.wso2telco.dep.gw.sequence_._ModifySMSDeliverySubscriptionResponsePayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifySMSDeliverySubscriptionResponsePayloadSeq>
+    <com.wso2telco.dep.gw.sequence_._ModifyMSDeliverySubscriptionRequestPayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifyMSDeliverySubscriptionRequestPayloadSeq>
+    <com.wso2telco.dep.gw.api_._smsAPI>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._smsAPI>
+    <com.wso2telco.dep.gw.sequence_._smsInboundNotificationHandlerSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._smsInboundNotificationHandlerSeq>
+    <com.wso2telco.dep.gw.sequence_._SMSQueryDeliveryStatusResponseSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SMSQueryDeliveryStatusResponseSeq>
+    <com.wso2telco.dep.gw.sequence_._SMSQueryDeliveryStatusSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SMSQueryDeliveryStatusSeq>
+    <com.wso2telco.dep.gw.sequence_._SMSStopSubsDeliveryNotificationResponseSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SMSStopSubsDeliveryNotificationResponseSeq>
+    <com.wso2telco.dep.gw.endpoint_._SMSRetrievalSeqEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._SMSRetrievalSeqEndpoint>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
+    <com.wso2telco.dep.gw.sequence_._smsInboundSubscriptionSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._smsInboundSubscriptionSeq>
+    <com.wso2telco.dep.gw.endpoint_._SMSStopSubsDeliveryNotificationEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._SMSStopSubsDeliveryNotificationEndpoint>
+    <com.wso2telco.dep.gw.sequence_._smsMainSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._smsMainSeq>
+    <com.wso2telco.dep.gw.endpoint_._SMSInboundNotificationEp>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._SMSInboundNotificationEp>
+    <com.wso2telco.dep.gw.endpoint_._DefaultSMSEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._DefaultSMSEndpoint>
+    <com.wso2telco.dep.gw.sequence_._SMSStopSubsMessageNotificationSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SMSStopSubsMessageNotificationSeq>
+    <com.wso2telco.dep.gw.sequence_._sendSmsSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._sendSmsSeq>
+    <com.wso2telco.dep.gw.sequence_._SMSStopSubsDeliveryNotificationSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SMSStopSubsDeliveryNotificationSeq>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>com.wso2telco.dep.gw</groupId>
-      <artifactId>com.wso2telco.dep.gw.ussdapi.mediator</artifactId>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SMSStopSubsDeliveryNotificationResponseSeq</artifactId>
       <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>APIPropertySeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.endpoint</groupId>
+      <artifactId>SMSInboundNotificationEp</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>ModifySMSNotificationSubscriptionRequestPayloadSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SMSQueryDeliveryStatusResponseSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.endpoint</groupId>
+      <artifactId>SMSRetrievalSeqEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SMSStopSubsDeliveryNotificationSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>StoreSMSDeliverySubscriptionSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>ModifySMSNotificationSubscriptionResponsePayloadSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SubscribeToSMSDeliveryNotificationsSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SMSRetrieveOutSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>ModifySMSDeliverySubscriptionResponsePayloadSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.api</groupId>
-      <artifactId>SMSGWAPI</artifactId>
+      <artifactId>smsAPI</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.endpoint</groupId>
+      <artifactId>SMSStopSubsDeliveryNotificationEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SMSRetrieveSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.endpoint</groupId>
+      <artifactId>SendSmsEp</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SendSMSDeliveryNotificationsSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>sendSmsSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.endpoint</groupId>
+      <artifactId>SMSQueryDeliveryStatusEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>StoreSMSNotificationSubscriptionSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SMSQueryDeliveryStatusSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>smsMainSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>ModifyMSDeliverySubscriptionRequestPayloadSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>smsInboundNotificationHandlerSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.endpoint</groupId>
+      <artifactId>DefaultSMSEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>smsInboundSubscriptionSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SMSStopSubsMessageNotificationSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>SendSmsOutSeq</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

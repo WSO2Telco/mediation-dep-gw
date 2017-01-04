@@ -6,6 +6,7 @@
     <groupId>com.wso2telco.dep.gw</groupId>
     <artifactId>com.wso2telco.dep.gw.ussdapi</artifactId>
     <version>1.0.0</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>com.wso2telco.dep.gw.ussdapi.synapse</artifactId>
@@ -116,6 +117,46 @@
         <executions>
           <execution>
             <id>api</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>pom-gen</goal>
+            </goals>
+            <configuration>
+              <artifactLocation>.</artifactLocation>
+              <typeList>${artifact.types}</typeList>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration />
+      </plugin>
+      <plugin>
+        <groupId>org.wso2.maven</groupId>
+        <artifactId>wso2-esb-sequence-plugin</artifactId>
+        <version>2.1.0</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <id>sequence</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>pom-gen</goal>
+            </goals>
+            <configuration>
+              <artifactLocation>.</artifactLocation>
+              <typeList>${artifact.types}</typeList>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration />
+      </plugin>
+      <plugin>
+        <groupId>org.wso2.maven</groupId>
+        <artifactId>wso2-esb-endpoint-plugin</artifactId>
+        <version>2.1.0</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <id>endpoint</id>
             <phase>process-resources</phase>
             <goals>
               <goal>pom-gen</goal>
