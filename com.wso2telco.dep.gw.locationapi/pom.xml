@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.wso2telco.dep.gw</groupId>
+    <artifactId>mediation-dep-gw</artifactId>
+    <version>1.0.0</version>
+
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <groupId>com.wso2telco.dep.gw</groupId>
+  <artifactId>com.wso2telco.dep.gw.locationapi</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>com.wso2telco.dep.gw.locationapi</name>
+  <description>com.wso2telco.dep.gw.locationapi</description>
+  <modules>
+    
+    <module>com.wso2telco.dep.gw.locationapi.synapse</module>
+    <module>locationapigw_capp</module>
+  </modules>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <buildcommands />
+          <projectnatures>
+            <projectnature>org.wso2.developerstudio.eclipse.mavenmultimodule.project.nature</projectnature>
+          </projectnatures>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
