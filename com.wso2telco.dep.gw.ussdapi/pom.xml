@@ -6,7 +6,6 @@
     <groupId>com.wso2telco.dep.gw</groupId>
     <artifactId>com.wso2telco.dep.gw.mediation</artifactId>
     <version>1.0.0</version>
-    <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>com.wso2telco.dep.gw.ussdapi</artifactId>
@@ -14,11 +13,6 @@
   <packaging>pom</packaging>
   <name>com.wso2telco.dep.gw.ussdapi</name>
   <description>com.wso2telco.dep.gw.ussdapi</description>
-  <modules>
-    <module>ussdapigw-synapse</module>
-    
-    <module>ussdapigw_capp</module>
-  </modules>
   <build>
     <plugins>
       <plugin>
@@ -33,4 +27,8 @@
       </plugin>
     </plugins>
   </build>
+  <modules>
+  	<module>ussdapigw-synapse</module>
+  	<module>ussdapigw_capp</module>
+  </modules>
 </project>
