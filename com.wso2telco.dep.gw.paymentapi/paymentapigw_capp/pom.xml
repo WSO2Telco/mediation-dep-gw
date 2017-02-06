@@ -23,7 +23,6 @@
     <com.wso2telco.dep.gw.sequence_._userInfoFaultSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._userInfoFaultSeq>
     <com.wso2telco.dep.gw.endpoint_._CelcomDBUserInfoEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._CelcomDBUserInfoEndpoint>
     <com.wso2telco.dep.gw.sequence_._userInfoAsyncSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._userInfoAsyncSeq>
-    <com.wso2telco.dep.gw.sequence_._APIPropertySeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._APIPropertySeq>
     <com.wso2telco.dep.gw.sequence_._paymentChargeSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentChargeSeq>
     <com.wso2telco.dep.gw.sequence_._paymentListTransactionsSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentListTransactionsSeq>
     <com.wso2telco.dep.gw.sequence_._chargeRequestSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._chargeRequestSeq>
@@ -50,12 +49,6 @@
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>filterCheckLimitSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>APIPropertySeq</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

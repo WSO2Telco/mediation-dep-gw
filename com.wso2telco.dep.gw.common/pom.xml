@@ -2,12 +2,23 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.wso2telco.dep.gw</groupId>
-  <artifactId>mediation-dep-gw</artifactId>
+  <parent>
+    <groupId>com.wso2telco.dep.gw</groupId>
+    <artifactId>mediation-dep-gw</artifactId>
+    <version>1.0.0</version>
+    <relativePath>pom.xml</relativePath>
+  </parent>
+  <groupId>com.wso2telco.dep.gw.common</groupId>
+  <artifactId>mediation-dep-common</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>com.wso2telco.dep.gw.mediation</name>
-  <description>com.wso2telco.dep.gw.mediation</description>
+  <name>com.wso2telco.dep.gw.common</name>
+  <description>mediation-dep-common</description>
+  <modules>
+    
+    <module>com.wso2telco.dep.gw.common.synapse</module>
+    <module>commongw_capp</module>
+  </modules>
   <build>
     <plugins>
       <plugin>
@@ -22,11 +33,4 @@
       </plugin>
     </plugins>
   </build>
-  <modules>
-  	<module>com.wso2telco.dep.gw.common</module>
-  	<module>com.wso2telco.dep.gw.locationapi</module>  	
-  	<module>com.wso2telco.dep.gw.smsapi</module>
-  	<module>com.wso2telco.dep.gw.ussdapi</module>
-  	<module>com.wso2telco.dep.gw.paymentapi</module>
-  </modules>
 </project>

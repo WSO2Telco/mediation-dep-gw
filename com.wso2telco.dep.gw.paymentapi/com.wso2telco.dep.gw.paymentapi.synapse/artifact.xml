@@ -23,9 +23,6 @@
     <artifact name="UserInfoEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/UserInfoEndpoint.xml</file>
     </artifact>
-    <artifact name="APIPropertySeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/apiPropertySeq.xml</file>
-    </artifact>
     <artifact name="CelcomAuthCallSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/celcomAuthCallSeq.xml</file>
     </artifact>

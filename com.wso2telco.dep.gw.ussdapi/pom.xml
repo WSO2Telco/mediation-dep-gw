@@ -4,8 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.wso2telco.dep.gw</groupId>
-    <artifactId>com.wso2telco.dep.gw.mediation</artifactId>
+    <artifactId>mediation-dep-gw</artifactId>
     <version>1.0.0</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>com.wso2telco.dep.gw.ussdapi</artifactId>

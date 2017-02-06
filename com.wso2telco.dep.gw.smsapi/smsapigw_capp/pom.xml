@@ -24,7 +24,6 @@
     <com.wso2telco.dep.gw.sequence_._SubscribeToSMSDeliveryNotificationsSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SubscribeToSMSDeliveryNotificationsSeq>
     <com.wso2telco.dep.gw.sequence_._StoreSMSNotificationSubscriptionSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._StoreSMSNotificationSubscriptionSeq>
     <com.wso2telco.dep.gw.sequence_._SMSRetrieveSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SMSRetrieveSeq>
-    <com.wso2telco.dep.gw.sequence_._APIPropertySeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._APIPropertySeq>
     <com.wso2telco.dep.gw.sequence_._ModifySMSNotificationSubscriptionResponsePayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifySMSNotificationSubscriptionResponsePayloadSeq>
     <com.wso2telco.dep.gw.sequence_._ModifySMSDeliverySubscriptionResponsePayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifySMSDeliverySubscriptionResponsePayloadSeq>
     <com.wso2telco.dep.gw.sequence_._ModifyMSDeliverySubscriptionRequestPayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifyMSDeliverySubscriptionRequestPayloadSeq>
@@ -48,12 +47,6 @@
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SMSStopSubsDeliveryNotificationResponseSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>APIPropertySeq</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
