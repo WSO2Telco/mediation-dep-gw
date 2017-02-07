@@ -9,13 +9,14 @@
                 <default/>
             </switch>
         </case>
-        <default>
+        <case regex="(AmountChargeHandler|AmountRefundHandler)">
             <switch source="$axis2:HTTP_SC">
                 <case regex="(200|201)">
                     <sequence key="replaceResourceURLSeq"/>
                 </case>
                 <default/>
             </switch>
-        </default>
+        </case>
+        <default/>
     </switch>
 </sequence>

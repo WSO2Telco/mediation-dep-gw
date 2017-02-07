@@ -37,11 +37,6 @@
 		<file>src/main/synapse-config/endpoints/smsStopSubsDeliveryNotificationEndpoint.xml</file>
 	</artifact>
 
-	<artifact name="APIPropertySeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-		<file>src/main/synapse-config/sequences/apiPropertySeq.xml</file>
-	</artifact>
-
 	<artifact name="ModifyMSDeliverySubscriptionRequestPayloadSeq"
 		groupId="com.wso2telco.dep.gw.sequence" version="1.0.0"
 		type="synapse/sequence" serverRole="EnterpriseServiceBus">
