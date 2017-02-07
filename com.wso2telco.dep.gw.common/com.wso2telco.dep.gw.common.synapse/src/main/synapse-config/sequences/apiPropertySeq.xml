@@ -5,6 +5,7 @@
     <property expression="$trp:CONTEXT" name="CONTEXT" scope="default" type="STRING"/>
     <property expression="$trp:API_VERSION" name="API_VERSION" scope="default" type="STRING"/>
     <property expression="$trp:API_NAME" name="API_NAME" scope="default" type="STRING"/>
+    <property expression="$trp:API_ID" name="API_ID" scope="default" type="STRING"/>
     <property expression="$trp:VERSION" name="VERSION" scope="default" type="STRING"/>
     <property expression="$trp:RESOURCE" name="RESOURCE" scope="default" type="STRING"/>
     <property expression="$trp:HTTP_METHOD" name="HTTP_METHOD" scope="default" type="STRING"/>
