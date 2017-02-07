@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="sendUssdSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <property name="REST_URL_POSTFIX" action="remove" scope="axis2"/>
+    <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
     <header expression="get-property('ENDPOINT')" name="To" scope="default"/>
+    <property expression="json-eval($.outboundUSSDMessageRequest.outboundUSSDMessage)" name="outboundUSSDMessage" scope="default" type="STRING"/>
     <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
-    	payload.outboundUSSDMessageRequest.responseRequest.notifyURL = mc.getProperty('subsEndPoint');
- 		mc.setPayloadJSON(payload);]]></script>
+payload.outboundUSSDMessageRequest.responseRequest.notifyURL = mc.getProperty('subsEndPoint');
+var str = mc.getProperty('outboundUSSDMessage');
+var text = str.replace("\n", "\\n").replace("\r", "\\r");
+payload.outboundUSSDMessageRequest.outboundUSSDMessage = text;
+mc.setPayloadJSON(payload);]]></script>
     <send>
         <endpoint key="sendUssdSeqEndpoint"/>
     </send>
-    <respond/>
-
 </sequence>
