@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.wso2telco.dep.gw.common</groupId>
-    <artifactId>mediation-dep-common</artifactId>
+    <artifactId>com.wso2telco.dep.gw.common</artifactId>
     <version>1.0.0</version>
-    <relativePath>pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.example.com.wso2telco.dep.gw.common.synapse</groupId>
   <artifactId>com.wso2telco.dep.gw.common.synapse</artifactId>

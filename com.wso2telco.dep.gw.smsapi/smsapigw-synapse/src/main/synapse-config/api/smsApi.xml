@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/smsmessaging" name="smsApi" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="POST GET DELETE PUT" url-mapping="/*">
-        <inSequence>
-            <sequence key="smsMainSeq"/>
-        </inSequence>
+    <resource methods="DELETE POST PUT GET" url-mapping="/*" inSequence="smsMainSeq" faultSequence="commonFault">
         <outSequence>
             <send/>
         </outSequence>
-        <faultSequence/>
     </resource>
 </api>
