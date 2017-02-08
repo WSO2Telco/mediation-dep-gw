@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/location" name="locationAPI" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="GET">
-        <inSequence>
-            <sequence key="locationSequence"/>
-        </inSequence>
+    <resource methods="GET" inSequence="locationSequence" faultSequence="commonFault">
         <outSequence>
             <respond/>
         </outSequence>
-        <faultSequence/>
     </resource>
 </api>
