@@ -2,4 +2,7 @@
     <artifact name="apiPropertySeq" groupId="com.example.com.wso2telco.dep.gw.common.synapse.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/apiPropertySeq.xml</file>
     </artifact>
+    <artifact name="commonFault" groupId="com.example.com.wso2telco.dep.gw.common.synapse.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/commonFault.xml</file>
+    </artifact>
 </artifacts>
