@@ -27,12 +27,15 @@ mysql-connector-java-5.1.36-bin.jar (external)
 3. Add following configuration files:
 * *mediator-conf.properties* to *ESB_HOME/repository/conf* 
 (repository: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/mediator-conf.properties)
+
 * *MobileCountryConfig.xml* to *ESB_HOME/repository/conf* 
 (repository: https://github.com/WSO2Telco/component-dep/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/MobileCountryConfig.xml)
+
 * *spendLimit.xml* to *ESB_HOME/repository/conf* 
 (repository:https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/spendLimit.xml)
 
 4. Configuring datasources
+
 * Add following database references:
 __proddepdb__ and __prodUMdb__ (with suitable user credentials) at *ESB_HOME/repository/conf/datasources/masterdatasources.xml*
 proddepdb : http://docs.wso2telco.com/display/HG/Setup+DEP+database
@@ -41,6 +44,7 @@ prodUMdb : http://docs.wso2telco.com/display/HG/Setup+++User+Manager+database
 *Important: Same databases has to refer while settingup __wso2telcohub__*
 
 5. Clone this repository and build using maven ($ mvn clean install)
+
 6. There will be 5 CApp files (.car files) created in following locations
 * mediation-dep-gw/com.wso2telco.dep.gw.common/commongw_capp/target/commongw_capp_1.0.0.car
 * mediation-dep-gw/com.wso2telco.dep.gw.locationapi/locationapigw_capp/target/locationapigw_capp_1.0.0.car
