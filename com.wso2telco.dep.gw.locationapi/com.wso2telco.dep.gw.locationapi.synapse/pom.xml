@@ -2,19 +2,13 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <!-- 
   <parent>
-    <groupId>com.wso2telco.dep.gw</groupId>
-    <artifactId>com.wso2telco.dep.gw.locationapi</artifactId>
-    <version>1.0.0</version>
-    <relativePath>../pom.xml</relativePath>
+  	<artifactId>com.wso2telco.dep.gw.locationapi</artifactId>
+  	<groupId>com.wso2telco.dep.gw</groupId>
+  	<version>2.0.0-SNAPSHOT</version>
   </parent>
-  
-  -->
-  
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>com.wso2telco.dep.gw.locationapi.synapse</artifactId>
-  <version>1.0.0</version>
   <packaging>pom</packaging>
   <name>com.wso2telco.dep.gw.locationapi.synapse</name>
   <description>com.wso2telco.dep.gw.locationapi.synapse</description>
@@ -175,11 +169,4 @@
       </plugin>
     </plugins>
   </build>
- 
-  <parent>
-  	<artifactId>com.wso2telco.dep.gw.locationapi</artifactId>
-  	<groupId>com.wso2telco.dep.gw</groupId>
-  	<version>1.0.0</version>
-  	<relativePath>../pom.xml</relativePath>
-  </parent>
 </project>

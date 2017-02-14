@@ -5,12 +5,10 @@
   <parent>
     <groupId>com.wso2telco.dep.gw</groupId>
     <artifactId>mediation-dep-gw</artifactId>
-    <version>1.0.0</version>
-    <relativePath>../pom.xml</relativePath>
+    <version>2.0.0-SNAPSHOT</version>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>com.wso2telco.dep.gw.smsapi</artifactId>
-  <version>1.0.0</version>
   <packaging>pom</packaging>
   <name>com.wso2telco.dep.gw.smsapi</name>
   <description>com.wso2telco.dep.gw.smsapi</description>

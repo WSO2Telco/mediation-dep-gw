@@ -5,11 +5,10 @@
   <parent>
     <groupId>com.wso2telco.dep.gw</groupId>
     <artifactId>com.wso2telco.dep.gw.ussdapi</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0-SNAPSHOT</version>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>ussdapigw_capp</artifactId>
-  <version>1.0.0</version>
   <packaging>carbon/application</packaging>
   <name>ussdapigw_capp</name>
   <description>ussdapigw_capp</description>
