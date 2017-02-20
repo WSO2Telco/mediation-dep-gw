@@ -22,7 +22,7 @@ Add follwoing .jar files to ESB as described:
 
 * To *ESB_HOME/repository/components/lib*
 ```
- com.wso2telco.dep.spend.limit.mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
+ com.wso2telco.dep.spend.limit.mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/mediation-dep)
  mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/mediation-dep/mediation-old)
  mnc-resolver-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
  oneapi-validation-2.1.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
