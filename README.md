@@ -24,7 +24,7 @@ Add follwoing .jar files to ESB as described:
 ```
  com.wso2telco.dep.spend.limit.mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/mediation-dep)
  mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/mediation-dep/mediation-old)
- mnc-resolver-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
+ mnc-resolver-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
  oneapi-validation-2.1.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
  mysql-connector-java-5.1.36-bin.jar (external)
  ```
@@ -34,7 +34,7 @@ Add following configuration files:
 (repository: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/mediator-conf.properties)
 
 * *MobileCountryConfig.xml* to *ESB_HOME/repository/conf* 
-(repository: https://github.com/WSO2Telco/component-dep/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/MobileCountryConfig.xml)
+(repository: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/MobileCountryConfig.xml)
 
 * *spendLimit.xml* to *ESB_HOME/repository/conf* 
 (repository:https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/spendLimit.xml)
