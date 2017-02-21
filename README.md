@@ -12,12 +12,12 @@ Add follwoing .jar files to ESB as described:
 
 * To *ESB_HOME/repository/components/dropins* 
 ```
- dbutils-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-utils)
+ dbutils-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
  javax.persistence_1.0.0.jar (external)
  json_3.0.0.wso2v1.jar (external)
- msisdn-validator-2.0.4-SNAPSHOT.jar 
+ msisdn-validator-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
  operator-service-3.0.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
- subscription-validator-3.0.0-SNAPSHOT.jar
+ subscription-validator-3.0.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
  ```
 
 * To *ESB_HOME/repository/components/lib*
