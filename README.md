@@ -46,7 +46,7 @@ __proddepdb__ and __prodUMdb__ (with suitable user credentials) at *ESB_HOME/rep
 proddepdb : http://docs.wso2telco.com/display/HG/Setup+DEP+database
 prodUMdb : http://docs.wso2telco.com/display/HG/Setup+++User+Manager+database
 
-*Important: Same databases has to refer while settingup __wso2telcohub__*
+*Important: Same databases are referred while setting up __wso2telcohub__*
 
 Clone this repository and build using maven ($ mvn clean install)
 
