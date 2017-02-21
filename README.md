@@ -81,7 +81,8 @@ Workflow configurations: http://docs.wso2telco.com/display/HG/Install+workflows
 ```
 <sequence key="httpHeaderSeq"/>
 ```
-(source: https://github.com/WSO2Telco/component-dep/blob/master/components/mediator/src/main/resources/httpHeaderSeq.xml)
+(source: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/synapse-configs/sequences/httpHeaderSeq.xml
+)
 8. Add following handler to each API:
 ```
 <handler class="com.wso2telco.dep.validator.handler.APIInfoHandler"/>
