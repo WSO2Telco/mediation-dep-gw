@@ -12,19 +12,19 @@ Add follwoing .jar files to ESB as described:
 
 * To *ESB_HOME/repository/components/dropins* 
 ```
- dbutils-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-utils)
+ dbutils-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
  javax.persistence_1.0.0.jar (external)
  json_3.0.0.wso2v1.jar (external)
- msisdn-validator-2.0.4-SNAPSHOT.jar 
+ msisdn-validator-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
  operator-service-3.0.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
- subscription-validator-3.0.0-SNAPSHOT.jar
+ subscription-validator-3.0.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
  ```
 
 * To *ESB_HOME/repository/components/lib*
 ```
  com.wso2telco.dep.spend.limit.mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/mediation-dep)
  mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/mediation-dep/mediation-old)
- mnc-resolver-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
+ mnc-resolver-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
  oneapi-validation-2.1.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
  mysql-connector-java-5.1.36-bin.jar (external)
  ```
@@ -34,7 +34,7 @@ Add following configuration files:
 (repository: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/mediator-conf.properties)
 
 * *MobileCountryConfig.xml* to *ESB_HOME/repository/conf* 
-(repository: https://github.com/WSO2Telco/component-dep/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/MobileCountryConfig.xml)
+(repository: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/MobileCountryConfig.xml)
 
 * *spendLimit.xml* to *ESB_HOME/repository/conf* 
 (repository:https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/spendLimit.xml)
@@ -46,7 +46,7 @@ __proddepdb__ and __prodUMdb__ (with suitable user credentials) at *ESB_HOME/rep
 proddepdb : http://docs.wso2telco.com/display/HG/Setup+DEP+database
 prodUMdb : http://docs.wso2telco.com/display/HG/Setup+++User+Manager+database
 
-*Important: Same databases has to refer while settingup __wso2telcohub__*
+*Important: Same databases are referred while setting up __wso2telcohub__*
 
 Clone this repository and build using maven ($ mvn clean install)
 
@@ -81,7 +81,8 @@ Workflow configurations: http://docs.wso2telco.com/display/HG/Install+workflows
 ```
 <sequence key="httpHeaderSeq"/>
 ```
-(source: https://github.com/WSO2Telco/component-dep/blob/master/components/mediator/src/main/resources/httpHeaderSeq.xml)
+(source: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/synapse-configs/sequences/httpHeaderSeq.xml
+)
 8. Add following handler to each API:
 ```
 <handler class="com.wso2telco.dep.validator.handler.APIInfoHandler"/>
