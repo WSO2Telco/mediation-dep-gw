@@ -1,5 +1,5 @@
 # mediation-dep-gw
-WSO2 ESB Mediation logic for Gateway Release
+WSO2 ESB Mediation Logic for Gateway Release
 
 ## Setting up the Deployment
 The deployment consists of configuring 2 products:
@@ -8,25 +8,25 @@ The deployment consists of configuring 2 products:
 
 ## Configuring WSO2 ESB
 Download a fresh __WSO2 ESB 5.0.0__ pack from website: http://wso2.com/products/enterprise-service-bus/
-Add follwoing .jar files to ESB as described:
+Add following .jar files (in *wso2telco_esb_externals.zip*) to ESB as described:
 
 * To *ESB_HOME/repository/components/dropins* 
 ```
- dbutils-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
- javax.persistence_1.0.0.jar (external)
- json_3.0.0.wso2v1.jar (external)
- msisdn-validator-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
- operator-service-3.0.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
- subscription-validator-3.0.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
+ dbutils.jar (repository: WSO2Telco/core-util)
+ mnc-resolver.jar (repository: WSO2Telco/core-util)
+ msisdn-validator.jar (repository: WSO2Telco/core-util)
+ operator-service.jar (repository: WSO2Telco/component-dep)
+ subscription-validator.jar (repository: WSO2Telco/component-dep)
+ javax.persistence_1.0.0.jar (external: http://www.java2s.com/Code/Jar/j/Downloadjavaxpersistence100jar.htm)
+ json_3.0.0.wso2v1.jar (external: http://maven.wso2.org/nexus/content/repositories/wso2-public/org/json/wso2/json/3.0.0.wso2v1/json-3.0.0.wso2v1.jar)
  ```
 
 * To *ESB_HOME/repository/components/lib*
 ```
- com.wso2telco.dep.spend.limit.mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/mediation-dep)
- mediator-1.0.0-SNAPSHOT.jar (repository: WSO2Telco/mediation-dep/mediation-old)
- mnc-resolver-2.0.4-SNAPSHOT.jar (repository: WSO2Telco/core-util)
- oneapi-validation-2.1.0-SNAPSHOT.jar (repository: WSO2Telco/component-dep)
- mysql-connector-java-5.1.36-bin.jar (external)
+ oneapi-validation.jar (repository: WSO2Telco/component-dep)
+ com.wso2telco.dep.spend.limit.mediator.jar (repository: WSO2Telco/mediation-dep)
+ mediator.jar (repository: WSO2Telco/mediation-dep/mediation-old)
+ mysql-connector-java-5.1.36-bin.jar (external: http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar)
  ```
 
 Add following configuration files:
@@ -70,22 +70,14 @@ Database configurations: http://docs.wso2telco.com/pages/viewpage.action?pageId=
 
 Workflow configurations: http://docs.wso2telco.com/display/HG/Install+workflows
 3. Start WSO2 TELCO HUB and goto Publisher app 
-4. Create APIs for nececssary use-cases and configure endpoint to ESB APIs. API __context__ should be as follows:
+4. Create APIs for necessary use-cases and configure endpoint to ESB APIs. API __context__ should be as follows:
 * payment
 * ussd
 * location
 * smsmessaging
-5. Add __validator-handler.jar__ at repository: component-dep/components/validator-handler/target to wso2telcohub/repository/components/lib
-6. Add Sequence __httpHeaderSeq.xml__ at component-dep/blob/master/components/mediator/src/main/resources/httpHeaderSeq.xml to wso2telcohub/repository/deployment/server/synapse-configs/default/sequences
-7. Add following sequence to inSequence :
-```
-<sequence key="httpHeaderSeq"/>
-```
-(source: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/synapse-configs/sequences/httpHeaderSeq.xml
-)
-8. Add following handler to each API:
-```
-<handler class="com.wso2telco.dep.validator.handler.APIInfoHandler"/>
-```
-(source: https://github.com/WSO2Telco/component-dep/blob/master/components/validator-handler/src/main/java/com/wso2telco/dep/validator/handler/APIInfoHandler.java)
+
+If WSO2 Telco Hub is port offset, change the port numbers at the following files accordingly
+* <TELCO_HUB_HOME>/repository/deployment/server/jaggeryapps/manage/site/conf/site.json
+* <TELCO_HUB_HOME> /repository/conf/workflow.properties
+* <TELCO_HUB_HOME> /repository/resources/workflow-extensions.xml
 
