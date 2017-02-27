@@ -45,7 +45,9 @@ Configuring datasources
 
 * Add following database references:
 __proddepdb__ and __prodUMdb__ (with suitable user credentials) at *ESB_HOME/repository/conf/datasources/masterdatasources.xml*
+
 proddepdb : http://docs.wso2telco.com/display/HG/Setup+DEP+database
+
 prodUMdb : http://docs.wso2telco.com/display/HG/Setup+++User+Manager+database
 
 *Important: Same databases are referred while setting up __wso2telcohub__*
