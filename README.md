@@ -3,12 +3,14 @@ WSO2 ESB Mediation Logic for Gateway Release
 
 ## Setting up the Deployment
 The deployment consists of configuring 2 products:
+
 1. wso2esb
 2. wso2telcohub
 
 ## Configuring WSO2 ESB
 Download a fresh __WSO2 ESB 5.0.0__ pack from website: http://wso2.com/products/enterprise-service-bus/
-Add following .jar files (in *wso2telco_esb_externals.zip*) to ESB as described:
+
+Add following .jar files to ESB as described (WSO2.Telco related files are bundled with *wso2telco_esb_externals.zip*):
 
 * To *ESB_HOME/repository/components/dropins* 
 ```
@@ -69,15 +71,19 @@ Start WSO2 ESB and upload CApp files (Refer: https://docs.wso2.com/display/ESB48
 Database configurations: http://docs.wso2telco.com/pages/viewpage.action?pageId=1507746
 
 Workflow configurations: http://docs.wso2telco.com/display/HG/Install+workflows
+
 3. Start WSO2 TELCO HUB and goto Publisher app 
+
 4. Create APIs for necessary use-cases and configure endpoint to ESB APIs. API __context__ should be as follows:
+
 * payment
 * ussd
 * location
 * smsmessaging
 
 If WSO2 Telco Hub is port offset, change the port numbers at the following files accordingly
-* <TELCO_HUB_HOME>/repository/deployment/server/jaggeryapps/manage/site/conf/site.json
-* <TELCO_HUB_HOME> /repository/conf/workflow.properties
-* <TELCO_HUB_HOME> /repository/resources/workflow-extensions.xml
+
+* TELCO_HUB_HOME/repository/deployment/server/jaggeryapps/manage/site/conf/site.json
+* TELCO_HUB_HOME/repository/conf/workflow.properties
+* TELCO_HUB_HOME/repository/resources/workflow-extensions.xml
 
