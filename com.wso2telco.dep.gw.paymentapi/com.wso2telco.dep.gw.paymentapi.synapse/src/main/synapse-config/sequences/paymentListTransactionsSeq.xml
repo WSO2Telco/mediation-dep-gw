@@ -4,6 +4,6 @@
     <header name="Accept" scope="transport" value="application/json"/>
     <header expression="get-property('ENDPOINT')" name="To" scope="default" xmlns:ns="http://org.apache.synapse/xsd"/>
     <send>
-        <endpoint key="defaultPaymentEndPoint"/>
+        <endpoint key="defaultPaymentEndpoint"/>
     </send>
 </sequence>

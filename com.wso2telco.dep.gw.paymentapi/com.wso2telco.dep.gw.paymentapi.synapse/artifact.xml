@@ -14,8 +14,8 @@
     <artifact name="DBUserInfoEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/DBUserInfoEndpoint.xml</file>
     </artifact>
-    <artifact name="DefaultPaymentEndPoint" groupId="com.wso2telco.dep.gw.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/endpoints/defaultPaymentEndPoint.xml</file>
+    <artifact name="defaultPaymentEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/defaultPaymentEndpoint.xml</file>
     </artifact>
     <artifact name="PaymentStatusSeqEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/paymentStatusSeqEndpoint.xml</file>

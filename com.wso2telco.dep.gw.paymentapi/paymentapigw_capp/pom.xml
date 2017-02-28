@@ -16,7 +16,7 @@
     <com.wso2telco.dep.gw.sequence_._paymentStatusSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentStatusSeq>
     <com.wso2telco.dep.gw.sequence_._checkLimitSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitSeq>
     <com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>
-    <com.wso2telco.dep.gw.endpoint_._DefaultPaymentEndPoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._DefaultPaymentEndPoint>
+    <com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>
     <com.wso2telco.dep.gw.sequence_._checkLimitErrorSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitErrorSeq>
     <com.wso2telco.dep.gw.endpoint_._CelcomTokenEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._CelcomTokenEndpoint>
     <com.wso2telco.dep.gw.sequence_._userInfoFaultSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._userInfoFaultSeq>
@@ -161,7 +161,7 @@
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
-      <artifactId>DefaultPaymentEndPoint</artifactId>
+      <artifactId>defaultPaymentEndpoint</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
