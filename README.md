@@ -84,6 +84,7 @@ Workflow configurations: http://docs.wso2telco.com/display/HG/Install+workflows
 * smsmessaging
 
 If WSO2 Telco Hub is port offset, change the port numbers at the following files accordingly
+(Ref: http://docs.wso2telco.com/display/HG/Offsetting+Product)
 
 * TELCO_HUB_HOME/repository/deployment/server/jaggeryapps/manage/site/conf/site.json
 * TELCO_HUB_HOME/repository/conf/workflow.properties
