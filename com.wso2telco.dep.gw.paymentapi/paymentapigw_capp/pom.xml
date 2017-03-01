@@ -38,7 +38,7 @@
     <com.wso2telco.dep.gw.sequence_._getCelcomAuthTokenSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._getCelcomAuthTokenSeq>
     <com.wso2telco.dep.gw.sequence_._setCelcomRegistryTokens>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._setCelcomRegistryTokens>
     <com.wso2telco.dep.gw.api_._paymentApi>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._paymentApi>
-    <com.wso2telco.dep.gw.endpoint_._PaymentStatusSeqEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._PaymentStatusSeqEndpoint>
+    <com.wso2telco.dep.gw.endpoint_._paymentStatusSeqEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._paymentStatusSeqEndpoint>
     <com.wso2telco.dep.gw.endpoint_._UserInfoEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._UserInfoEndpoint>
     <com.wso2telco.dep.gw.sequence_._celcomAuthCallSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._celcomAuthCallSeq>
     <com.wso2telco.dep.gw.sequence_._dropSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._dropSeq>
@@ -156,7 +156,7 @@
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
-      <artifactId>PaymentStatusSeqEndpoint</artifactId>
+      <artifactId>paymentStatusSeqEndpoint</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
