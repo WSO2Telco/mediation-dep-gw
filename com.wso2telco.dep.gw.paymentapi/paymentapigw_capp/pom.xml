@@ -10,7 +10,6 @@
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>paymentapigw_capp</artifactId>
   <packaging>carbon/application</packaging>
-  <version>2.0.0-SNAPSHOT</version>
   <name>paymentapigw_capp</name>
   <description>paymentapigw_capp</description>
   <properties>
