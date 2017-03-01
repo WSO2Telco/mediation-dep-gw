@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="paymentAPI" groupId="com.wso2telco.dep.gw.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentApi" groupId="com.wso2telco.dep.gw.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/paymentApi.xml</file>
     </artifact>
     <artifact name="CelcomDBUserInfoEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
@@ -23,13 +23,13 @@
     <artifact name="UserInfoEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/UserInfoEndpoint.xml</file>
     </artifact>
-    <artifact name="CelcomAuthCallSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="celcomAuthCallSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/celcomAuthCallSeq.xml</file>
     </artifact>
     <artifact name="chargeRequestSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/chargeRequestSeq.xml</file>
     </artifact>
-    <artifact name="checkLimitErrorSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="checkLimitError" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/checkLimitError.xml</file>
     </artifact>
     <artifact name="checkLimitSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
@@ -38,7 +38,7 @@
     <artifact name="dbAsyncInsertSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/dbAsyncInsertSeq.xml</file>
     </artifact>
-    <artifact name="dbAsyncInsertSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="dbFaultError" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/dbFaultError.xml</file>
     </artifact>
     <artifact name="dbLookupSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">

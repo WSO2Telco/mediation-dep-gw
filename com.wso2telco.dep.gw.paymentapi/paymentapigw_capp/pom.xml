@@ -10,6 +10,7 @@
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>paymentapigw_capp</artifactId>
   <packaging>carbon/application</packaging>
+  <version>2.0.0-SNAPSHOT</version>
   <name>paymentapigw_capp</name>
   <description>paymentapigw_capp</description>
   <properties>
@@ -17,7 +18,7 @@
     <com.wso2telco.dep.gw.sequence_._checkLimitSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitSeq>
     <com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>
     <com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>
-    <com.wso2telco.dep.gw.sequence_._checkLimitErrorSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitErrorSeq>
+    <com.wso2telco.dep.gw.sequence_._checkLimitError>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitError>
     <com.wso2telco.dep.gw.endpoint_._CelcomTokenEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._CelcomTokenEndpoint>
     <com.wso2telco.dep.gw.sequence_._userInfoFaultSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._userInfoFaultSeq>
     <com.wso2telco.dep.gw.endpoint_._CelcomDBUserInfoEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._CelcomDBUserInfoEndpoint>
@@ -36,10 +37,10 @@
     <com.wso2telco.dep.gw.sequence_._paymentRefundSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentRefundSeq>
     <com.wso2telco.dep.gw.sequence_._getCelcomAuthTokenSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._getCelcomAuthTokenSeq>
     <com.wso2telco.dep.gw.sequence_._setCelcomRegistryTokens>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._setCelcomRegistryTokens>
-    <com.wso2telco.dep.gw.api_._paymentAPI>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._paymentAPI>
+    <com.wso2telco.dep.gw.api_._paymentApi>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._paymentApi>
     <com.wso2telco.dep.gw.endpoint_._PaymentStatusSeqEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._PaymentStatusSeqEndpoint>
     <com.wso2telco.dep.gw.endpoint_._UserInfoEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._UserInfoEndpoint>
-    <com.wso2telco.dep.gw.sequence_._CelcomAuthCallSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._CelcomAuthCallSeq>
+    <com.wso2telco.dep.gw.sequence_._celcomAuthCallSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._celcomAuthCallSeq>
     <com.wso2telco.dep.gw.sequence_._dropSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._dropSeq>
     <com.wso2telco.dep.gw.sequence_._replaceResourceURLSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._replaceResourceURLSeq>
     <com.wso2telco.dep.gw.sequence_._userInfoSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._userInfoSeq>
@@ -53,7 +54,7 @@
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>checkLimitErrorSeq</artifactId>
+      <artifactId>checkLimitError</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
@@ -77,7 +78,7 @@
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.api</groupId>
-      <artifactId>paymentAPI</artifactId>
+      <artifactId>paymentApi</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
@@ -107,7 +108,7 @@
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>CelcomAuthCallSeq</artifactId>
+      <artifactId>celcomAuthCallSeq</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
@@ -180,6 +181,12 @@
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>dbAsyncInsertSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>dbFaultError</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
