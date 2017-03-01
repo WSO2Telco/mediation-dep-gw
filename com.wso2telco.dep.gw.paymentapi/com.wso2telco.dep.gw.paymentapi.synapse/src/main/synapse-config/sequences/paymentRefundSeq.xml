@@ -3,6 +3,6 @@
     <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
     <header expression="get-property('ENDPOINT')" name="To" scope="default"/>
     <send>
-        <endpoint key="defaultPaymentEndPoint"/>
+        <endpoint key="defaultPaymentEndpoint"/>
     </send>
 </sequence>

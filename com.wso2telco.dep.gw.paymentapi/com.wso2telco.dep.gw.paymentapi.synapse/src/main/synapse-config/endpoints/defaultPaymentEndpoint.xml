@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<endpoint name="defaultPaymentEndPoint" xmlns="http://ws.apache.org/ns/synapse">
-    <default trace="disable"/>
+<endpoint name="defaultPaymentEndpoint" xmlns="http://ws.apache.org/ns/synapse">
+    <default>
     <timeout>
         <duration>2000</duration>
         <responseAction>fault</responseAction>
@@ -16,4 +16,5 @@
         <retriesBeforeSuspension>3</retriesBeforeSuspension>
         <retryDelay>1</retryDelay>
     </markForSuspension>
+    </default>
 </endpoint>
