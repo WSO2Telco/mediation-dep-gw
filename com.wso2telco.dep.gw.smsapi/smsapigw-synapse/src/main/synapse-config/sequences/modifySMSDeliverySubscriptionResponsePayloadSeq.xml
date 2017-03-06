@@ -7,6 +7,6 @@
     		var subscriptionID = mc.getProperty('subscriptionID');
  			payload.deliveryReceiptSubscription.resourceURL = hubGateway + requestResourceUrl + "/" + subscriptionID;
 	    	payload.deliveryReceiptSubscription.callbackReference.notifyURL = mc.getProperty('originalNotifyURL');
-	    	payload.deliveryReceiptSubscription.callbackReference.clientCorrelator = mc.getProperty('originalClientCorrelator');
+	    	payload.deliveryReceiptSubscription.clientCorrelator = mc.getProperty('originalClientCorrelator');
 	 		mc.setPayloadJSON(payload);]]></script>
 </sequence>
