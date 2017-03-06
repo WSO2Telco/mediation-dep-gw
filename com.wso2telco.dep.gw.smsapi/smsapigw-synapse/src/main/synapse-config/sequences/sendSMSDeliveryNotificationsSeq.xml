@@ -5,4 +5,5 @@
     <call>
         <endpoint key="smsInboundNotificationEp"/>
     </call>
+    <respond/>
 </sequence>
