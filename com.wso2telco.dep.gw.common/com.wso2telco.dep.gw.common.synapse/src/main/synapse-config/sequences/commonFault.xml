@@ -28,7 +28,7 @@
                     <m:requestError xmlns:m="http://services.samples">
                         <m:serviceException>
                             <m:messageId>$1</m:messageId>
-                            <m:text> Invalid input value for message part %1</m:text>
+                            <m:text>Invalid input value for message part %1</m:text>
                             <m:variables>$2</m:variables>
                         </m:serviceException>
                     </m:requestError>
