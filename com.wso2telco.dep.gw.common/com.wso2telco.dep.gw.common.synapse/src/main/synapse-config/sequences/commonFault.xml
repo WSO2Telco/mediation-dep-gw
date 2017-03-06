@@ -680,10 +680,7 @@
     <header action="remove" name="To" scope="default"/>
     <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
     <property action="remove" name="ContentType" scope="axis2"/>
-    <property action="remove" name="Authorization" scope="transport"/>
-    <property action="remove" name="Host" scope="transport"/>
-    <property action="remove" name="Accept" scope="transport"/>
-    <property action="remove" name="X-JWT-Assertion" scope="transport"/>
+    <property name="TRANSPORT_HEADERS" action="remove" scope="axis2"/>
     <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
     <send/>
 </sequence>
