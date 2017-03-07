@@ -28,6 +28,7 @@ Add following .jar files to ESB as described (WSO2.Telco related files are bundl
  oneapi-validation.jar (repository: WSO2Telco/component-dep)
  com.wso2telco.dep.spend.limit.mediator.jar (repository: WSO2Telco/mediation-dep)
  mediator.jar (repository: WSO2Telco/mediation-dep/mediation-old)
+ logging-extension.jar (repository: WSO2Telco/mediation-dep)
  mysql-connector-java-5.1.36-bin.jar (external: http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar)
  ```
 
@@ -40,6 +41,9 @@ Add following configuration files:
 
 * *spendLimit.xml* to *ESB_HOME/repository/conf* 
 (repository:https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/spendLimit.xml)
+
+* *oneapi-validation-conf.properties* to *ESB_HOME/repository/conf* 
+(repository:https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/oneapi-validation-conf.properties)
 
 Configuring datasources
 
