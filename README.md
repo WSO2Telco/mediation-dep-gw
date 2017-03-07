@@ -28,7 +28,6 @@ Add following .jar files to ESB as described (WSO2.Telco related files are bundl
  oneapi-validation.jar (repository: WSO2Telco/component-dep)
  com.wso2telco.dep.spend.limit.mediator.jar (repository: WSO2Telco/mediation-dep)
  mediator.jar (repository: WSO2Telco/mediation-dep/mediation-old)
- logging-extension.jar (repository: WSO2Telco/mediation-dep)
  mysql-connector-java-5.1.36-bin.jar (external: http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar)
  ```
 
