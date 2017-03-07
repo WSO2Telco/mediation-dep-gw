@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assembly
+		xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+
+	<id>dist</id>
+
+	<baseDirectory>/</baseDirectory>
+
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+
+	<fileSets>
+		<fileSet>
+			<directory>../com.wso2telco.dep.gw.common/commongw_capp/target</directory>
+			<includes>
+				<include>commongw_capp_${pom.version}.car</include>
+			</includes>
+			<outputDirectory>/capps</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>../com.wso2telco.dep.gw.locationapi/locationapigw_capp/target</directory>
+			<includes>
+				<include>locationapigw_capp_${pom.version}.car</include>
+			</includes>
+			<outputDirectory>/capps</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>../com.wso2telco.dep.gw.paymentapi/paymentapigw_capp/target</directory>
+			<includes>
+				<include>paymentapigw_capp_${pom.version}.car</include>
+			</includes>
+			<outputDirectory>/capps</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>../com.wso2telco.dep.gw.smsapi/smsapigw_capp/target</directory>
+			<includes>
+				<include>smsapigw_capp_${pom.version}.car</include>
+			</includes>
+			<outputDirectory>/capps</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>../com.wso2telco.dep.gw.ussdapi/ussdapigw_capp/target</directory>
+			<includes>
+				<include>ussdapigw_capp_${pom.version}.car</include>
+			</includes>
+			<outputDirectory>/capps</outputDirectory>
+		</fileSet>
+	</fileSets>
+</assembly>
+
+
+
