@@ -9,6 +9,6 @@
     expression="json-eval($.amountTransaction.paymentAmount.chargingInformation.amount)"
     name="chargeAmount" scope="default" type="STRING"/>
 
-      <sequence key="checkLimitSeq"/>
+      <sequence key="chargeRequestSeq"/>
 
 </sequence>
