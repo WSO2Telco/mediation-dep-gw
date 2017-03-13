@@ -4,6 +4,5 @@
     <property expression="json-eval($.subscription.clientCorrelator)" name="originalClientCorrelator" scope="default" type="STRING"/>
     <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
     	payload.subscription.callbackReference.notifyURL = mc.getProperty('notifyURL');
-    	payload.subscription.clientCorrelator = mc.getProperty('clientCorrelator');
  		mc.setPayloadJSON(payload);]]></script>
 </sequence>
