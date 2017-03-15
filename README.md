@@ -10,7 +10,7 @@ The deployment consists of configuring 2 products:
 ## Configuring WSO2 ESB
 Download a fresh __WSO2 ESB 5.0.0__ pack from website: http://wso2.com/products/enterprise-service-bus/
 
-Add following .jar files to ESB as described (WSO2.Telco related files are bundled with *wso2telco_esb_externals.zip*):
+Add following .jar files to ESB as described (WSO2.Telco related files are bundled with *wso2telco_ext_gw_mediation-v2.0.0.zip*):
 
 * To *ESB_HOME/repository/components/dropins* 
 ```
@@ -93,8 +93,13 @@ If WSO2 Telco Hub is port offset, change the port numbers at the following files
 * TELCO_HUB_HOME/repository/conf/workflow.properties
 * TELCO_HUB_HOME/repository/resources/workflow-extensions.xml
 
-If MSISDN blacklist,whitelist feature please add the following handlers to api.xml file with following handlers.
+For MSISDN blacklist,whitelist features, please add the following handlers to "api-synapse.xml" (TELCO_HUB_HOME//repository/deployment/server/synapse-configs/default/api/)file with following handlers.
 
+```
+<handler class="com.wso2telco.dep.verificationhandler.verifier.BlacklistHandler"/>
+<handler class="com.wso2telco.dep.verificationhandler.verifier.WhitelistHandler"/>
+      ```
+Eg:
 ```
  <handlers>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
