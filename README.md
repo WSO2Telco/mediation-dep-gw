@@ -100,6 +100,7 @@ For MSISDN blacklist,whitelist features, please add the following handlers to "a
 <handler class="com.wso2telco.dep.verificationhandler.verifier.WhitelistHandler"/>
       ```
 Eg:
+
 ```
  <handlers>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
