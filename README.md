@@ -98,11 +98,12 @@ For MSISDN blacklist,whitelist features, please add the following handlers to "a
 ```
 <handler class="com.wso2telco.dep.verificationhandler.verifier.BlacklistHandler"/>
 <handler class="com.wso2telco.dep.verificationhandler.verifier.WhitelistHandler"/>
-      ```
+```
 Eg:
 
 ```
- <handlers>
+
+<handlers>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>
