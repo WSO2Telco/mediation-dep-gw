@@ -1,6 +1,8 @@
 # mediation-dep-gw
 WSO2 ESB Mediation Logic for Gateway Release
 
+Build Status : [![Build Status](http://ci.wso2telco.com/job/mediation-dep-gw/badge/icon)](http://ci.wso2telco.com/job/mediation-dep-gw)
+
 ## Setting up the Deployment
 The deployment consists of configuring 2 products:
 
