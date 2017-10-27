@@ -18,10 +18,11 @@
     <com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>
     <com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>
     <com.wso2telco.dep.gw.sequence_._checkLimitError>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitError>
-    
-    
-    
-    
+    <com.wso2telco.dep.gw.sequence_._mandateCheckSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._mandateCheckSeq>
+
+
+
+
     <com.wso2telco.dep.gw.sequence_._paymentChargeSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentChargeSeq>
     <com.wso2telco.dep.gw.sequence_._paymentListTransactionsSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentListTransactionsSeq>
     <com.wso2telco.dep.gw.sequence_._chargeRequestSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._chargeRequestSeq>
@@ -138,6 +139,12 @@
         <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>replaceResourceURLForListSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>mandateCheckSeq</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

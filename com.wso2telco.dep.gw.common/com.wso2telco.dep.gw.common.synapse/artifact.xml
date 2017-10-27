@@ -5,4 +5,10 @@
     <artifact name="commonFault" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/commonFault.xml</file>
     </artifact>
+    <artifact name="com.wso2telco.dep.common.response.exceptions.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.response.exceptions.Sequence.xml</file>
+    </artifact>
+    <artifact name="com.wso2telco.dep.common.response.unexpectedError.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.response.unexpectedError.Sequence.xml</file>
+    </artifact>
 </artifacts>
