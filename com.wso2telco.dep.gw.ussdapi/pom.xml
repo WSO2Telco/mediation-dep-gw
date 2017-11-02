@@ -30,4 +30,5 @@
   	<module>ussdapigw-synapse</module>
   	<module>ussdapigw_capp</module>
   </modules>
+  <version>2.1.1-SNAPSHOT</version>
 </project>
