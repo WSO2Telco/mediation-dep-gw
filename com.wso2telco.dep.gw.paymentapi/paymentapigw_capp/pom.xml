@@ -9,146 +9,134 @@
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>paymentapigw_capp</artifactId>
+  <version>2.1.1-SNAPSHOT</version>
   <packaging>carbon/application</packaging>
   <name>paymentapigw_capp</name>
   <description>paymentapigw_capp</description>
   <properties>
     <com.wso2telco.dep.gw.sequence_._paymentStatusSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentStatusSeq>
-    <com.wso2telco.dep.gw.sequence_._checkLimitSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitSeq>
-    <com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>
-    <com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>
+    <com.wso2telco.dep.gw.api_._paymentApi>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._paymentApi>
     <com.wso2telco.dep.gw.sequence_._checkLimitError>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitError>
+    <com.wso2telco.dep.gw.sequence_._checkLimitSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitSeq>
     <com.wso2telco.dep.gw.sequence_._mandateCheckSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._mandateCheckSeq>
-
-
-
-
+    <com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>
     <com.wso2telco.dep.gw.sequence_._paymentChargeSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentChargeSeq>
     <com.wso2telco.dep.gw.sequence_._paymentListTransactionsSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentListTransactionsSeq>
     <com.wso2telco.dep.gw.sequence_._chargeRequestSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._chargeRequestSeq>
-    
     <com.wso2telco.dep.gw.sequence_._paymentMainSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentMainSeq>
-    
-    
-    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
-    
+    <com.wso2telco.dep.gw.endpoint_._paymentStatusSeqEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._paymentStatusSeqEndpoint>
+    <com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._defaultPaymentEndpoint>
+    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,lib/registry/handlers=jar,service/rule=aar,lib/registry/filter=jar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,synapse/api=xml,wso2/gadget=dar,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
     <com.wso2telco.dep.gw.sequence_._replaceResourceURLForListSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._replaceResourceURLForListSeq>
     <com.wso2telco.dep.gw.sequence_._filterCheckLimitSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._filterCheckLimitSeq>
     <com.wso2telco.dep.gw.sequence_._paymentRefundSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentRefundSeq>
-    
-    
-    <com.wso2telco.dep.gw.api_._paymentApi>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._paymentApi>
-    <com.wso2telco.dep.gw.endpoint_._paymentStatusSeqEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._paymentStatusSeqEndpoint>
-    
-    
     <com.wso2telco.dep.gw.sequence_._dropSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._dropSeq>
     <com.wso2telco.dep.gw.sequence_._replaceResourceURLSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._replaceResourceURLSeq>
-    
   </properties>
   <dependencies>
     <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>filterCheckLimitSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>checkLimitError</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>paymentChargeSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>checkLimitSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>dropSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>com.wso2telco.dep.gw.api</groupId>
       <artifactId>paymentApi</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-                <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>paymentListTransactionsSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-                <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>paymentStatusSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>replaceResourceURLSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>paymentMainSeq</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-            <dependency>
-      <groupId>com.wso2telco.dep.gw.endpoint</groupId>
-      <artifactId>paymentStatusSeqEndpoint</artifactId>
-      <version>1.0.0</version>
+      <version>2.1.1-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>defaultPaymentEndpoint</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-                    <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>paymentRefundSeq</artifactId>
-      <version>1.0.0</version>
+      <version>2.1.1-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>paymentOutMainSeq</artifactId>
-      <version>1.0.0</version>
+      <groupId>com.wso2telco.dep.gw.endpoint</groupId>
+      <artifactId>paymentStatusSeqEndpoint</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>chargeRequestSeq</artifactId>
-      <version>1.0.0</version>
+      <version>2.1.1-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
-        <dependency>
+    <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
-      <artifactId>replaceResourceURLForListSeq</artifactId>
-      <version>1.0.0</version>
+      <artifactId>checkLimitError</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>checkLimitSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>dropSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>filterCheckLimitSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>mandateCheckSeq</artifactId>
-      <version>1.0.0</version>
+      <version>2.1.1-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
-      </dependencies>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>paymentChargeSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>paymentListTransactionsSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>paymentMainSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>paymentOutMainSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>paymentRefundSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>paymentStatusSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>replaceResourceURLForListSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>replaceResourceURLSeq</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+  </dependencies>
   <repositories>
     <repository>
       <releases>
