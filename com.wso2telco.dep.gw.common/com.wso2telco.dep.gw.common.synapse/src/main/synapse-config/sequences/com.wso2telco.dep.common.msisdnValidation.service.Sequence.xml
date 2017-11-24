@@ -61,13 +61,17 @@
             {
             "valid": $1,
             "invalid": $2,
-            "validationRegex": "$3"
+            "validationRegex": "$3",
+            "prefixGroup": "$4",
+            "digitsGroup": "$5"
             }
         </format>
         <args>
             <arg evaluator="xml" expression="$ctx:validMsisdns" xmlns:ns="http://org.apache.synapse/xsd"/>
             <arg evaluator="xml" expression="$ctx:invalidMsisdns" xmlns:ns="http://org.apache.synapse/xsd"/>
             <arg evaluator="xml" expression="$ctx:validationRegex" xmlns:ns="http://org.apache.synapse/xsd"/>
+            <arg evaluator="xml" expression="$ctx:validationPrefixGroup" xmlns:ns="http://org.apache.synapse/xsd"/>
+            <arg evaluator="xml" expression="$ctx:validationDigitsGroup" xmlns:ns="http://org.apache.synapse/xsd"/>
         </args>
     </payloadFactory>
     <respond/>
