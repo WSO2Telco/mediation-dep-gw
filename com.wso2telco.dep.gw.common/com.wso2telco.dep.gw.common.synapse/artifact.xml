@@ -17,4 +17,7 @@
     <artifact name="com.wso2telco.dep.common.msisdnValidation.service.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="2.1.1-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.msisdnValidation.service.Sequence.xml</file>
     </artifact>
+    <artifact name="com.wso2telco.dep.common.validationRegex.service.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="2.1.1-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.validationRegex.service.Sequence.xml</file>
+    </artifact>
 </artifacts>

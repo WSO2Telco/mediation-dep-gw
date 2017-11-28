@@ -7,4 +7,12 @@
            <respond/>
        </outSequence>
    </resource>
+<resource methods="GET" url-mapping="/validationRegex"
+ inSequence="com.wso2telco.dep.common.validationRegex.service.Sequence"
+ faultSequence="com.wso2telco.dep.common.response.unexpectedError.Sequence">
+       <outSequence>
+           <respond/>
+       </outSequence>
+   </resource>
+   
 </api>

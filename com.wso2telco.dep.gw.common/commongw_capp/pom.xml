@@ -16,6 +16,7 @@
   <properties>
     <com.wso2telco.dep.gw.common.synapse.sequence_._com.wso2telco.dep.common.msisdnValidation.service.Sequence>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.common.synapse.sequence_._com.wso2telco.dep.common.msisdnValidation.service.Sequence>
     <com.wso2telco.dep.gw.common.synapse.sequence_._apiPropertySeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.common.synapse.sequence_._apiPropertySeq>
+    <com.wso2telco.dep.gw.common.synapse.sequence_._com.wso2telco.dep.common.validationRegex.service.Sequence>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.common.synapse.sequence_._com.wso2telco.dep.common.validationRegex.service.Sequence>
     <com.wso2telco.dep.gw.common.synapse.sequence_._com.wso2telco.dep.common.response.exceptions.Sequence>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.common.synapse.sequence_._com.wso2telco.dep.common.response.exceptions.Sequence>
     <com.wso2telco.dep.gw.common.synapse.api_._commonAPI>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.common.synapse.api_._commonAPI>
     <com.wso2telco.dep.gw.common.synapse.sequence_._com.wso2telco.dep.common.response.unexpectedError.Sequence>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.common.synapse.sequence_._com.wso2telco.dep.common.response.unexpectedError.Sequence>
@@ -56,6 +57,12 @@
     <dependency>
       <groupId>com.wso2telco.dep.gw.common.synapse.sequence</groupId>
       <artifactId>commonFault</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.common.synapse.sequence</groupId>
+      <artifactId>com.wso2telco.dep.common.validationRegex.service.Sequence</artifactId>
       <version>2.1.1-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
