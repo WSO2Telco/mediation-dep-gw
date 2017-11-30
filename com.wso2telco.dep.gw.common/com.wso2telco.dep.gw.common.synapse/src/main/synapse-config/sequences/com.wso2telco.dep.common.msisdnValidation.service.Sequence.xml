@@ -48,22 +48,14 @@
     </then>
     </filter>
 
-    <log level="custom">
-        <property expression="$ctx:validMsisdns"
-                  name="----------valid-------" xmlns:ns="http://org.apache.synapse/xsd"/>
-    </log>
-    <log level="custom">
-        <property expression="$ctx:invalidMsisdns"
-                  name="------invalid--------" xmlns:ns="http://org.apache.synapse/xsd"/>
-    </log>
     <payloadFactory media-type="json">
         <format>
             {
             "valid": $1,
             "invalid": $2,
             "validationRegex": "$3",
-            "prefixGroup": "$4",
-            "digitsGroup": "$5"
+            "prefixGroup": $4,
+            "digitsGroup": $5
             }
         </format>
         <args>
