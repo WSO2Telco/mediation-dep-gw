@@ -2,7 +2,7 @@
 <sequence
   name="com.wso2telco.dep.common.validationRegex.service.Sequence"
   trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-  <class name="com.wso2telco.dep.oneapivalidation.util.RegexMediator"/>
+  <class name="com.wso2telco.dep.oneapivalidation.util.MsisdnFormatMediator"/>
   <filter regex="^true$" source="$ctx:INTERNAL_ERROR">
     <then>
       <sequence key="com.wso2telco.dep.common.response.exceptions.Sequence"/>
