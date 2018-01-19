@@ -5,6 +5,7 @@
     <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
     	payload.inboundUSSDMessageRequest.responseRequest.notifyURL = mc.getProperty('spEndpoint');
  		mc.setPayloadJSON(payload);]]></script>
+    <header name="Accept" value="application/json" scope="transport"/>
     <call>
         <endpoint key="ussdInboundSeqEndpoint"/>
     </call>
