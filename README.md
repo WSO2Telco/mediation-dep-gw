@@ -46,6 +46,8 @@ Add following configuration files:
 * *oneapi-validation-conf.properties* to *ESB_HOME/repository/conf* 
 (repository:https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/oneapi-validation-conf.properties)
 
+_NOTE:_ If using an older verion of the product, ensure that you have checked out the matching version tag before copying above configurations.
+
 Configuring datasources
 
 * Add following database references:
