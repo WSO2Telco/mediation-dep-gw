@@ -2,7 +2,11 @@
 <sequence name="modifySMSDeliverySubscriptionRequestPayloadSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
     <property expression="json-eval($.deliveryReceiptSubscription.callbackReference.notifyURL)" name="originalNotifyURL" scope="default" type="STRING"/>
     <property expression="json-eval($.deliveryReceiptSubscription.clientCorrelator)" name="originalClientCorrelator" scope="default" type="STRING"/>
-    <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
-    	payload.deliveryReceiptSubscription.callbackReference.notifyURL = mc.getProperty('notifyURL');
- 		mc.setPayloadJSON(payload);]]></script>
+    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
+          <property name="script" value="
+            var payload= mc.getPayloadJSON();
+            payload.deliveryReceiptSubscription.callbackReference.notifyURL = mc.getProperty('notifyURL');
+            mc.setPayloadJSON(payload);
+          "/>
+    </class>
 </sequence>

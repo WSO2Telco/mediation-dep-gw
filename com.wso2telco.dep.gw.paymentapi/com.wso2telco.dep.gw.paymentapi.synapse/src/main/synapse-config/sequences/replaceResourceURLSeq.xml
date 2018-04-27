@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="replaceResourceURLSeq" xmlns="http://ws.apache.org/ns/synapse">
-    <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
-    	var hubGateway = mc.getProperty('hubGateway').trim();
-    	var requestResourceUrl = mc.getProperty('requestResourceUrl').trim();
-    	var requestID = mc.getProperty('requestID').trim();
- 	payload.amountTransaction.resourceURL = hubGateway + requestResourceUrl + requestID;
- 	mc.setPayloadJSON(payload);]]></script>
+	<class name="org.wso2telco.dep.nashornmediator.NashornMediator">
+	    <property name="script" value="
+	    var payload= mc.getPayloadJSON();
+	        var hubGateway = mc.getProperty('hubGateway').trim();
+	        var requestResourceUrl = mc.getProperty('requestResourceUrl').trim();
+	        var requestID = mc.getProperty('requestID').trim();
+	        var originalClientCorrelator = mc.getProperty('originalClientCorrelator');
+	        if (originalClientCorrelator != null &amp;&amp; originalClientCorrelator !='') {
+	        payload.amountTransaction.clientCorrelator = originalClientCorrelator;
+	        } else {
+	        delete payload.amountTransaction.clientCorrelator;
+	        }
+	    payload.amountTransaction.resourceURL = hubGateway + requestResourceUrl + requestID;
+	    mc.setPayloadJSON(payload);
+	"/>
+	</class>
 </sequence>
