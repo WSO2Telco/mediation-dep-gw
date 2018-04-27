@@ -8,13 +8,11 @@
 	        var requestId = mc.getProperty('REQUEST_ID').trim();
 	        var encodedSenderAddress = mc.getProperty('ENCODED_SENDER_ADDRESS').trim();
 	        
-	        // get the request id sent from operator side
 	        var responseResourceUrl = payload.outboundSMSMessageRequest.resourceURL;
 	        var operatorRequestId = responseResourceUrl.substring(responseResourceUrl.lastIndexOf('/') + 1);
 	        if (!operatorRequestId) {
 	            throw 'ERROR - Unable extract operator request id (plugin_requestid) from response';
 	        }
-	        // set request id sent from operator side to message context
 	        mc.setProperty('SEND_SMS_OPERATOR_REQUEST_ID', operatorRequestId); 
 	        
 	        var resourceUrl = smsRetrieveResourceUrlPrefix + '/' + encodedSenderAddress + '/requests/' + requestId;
