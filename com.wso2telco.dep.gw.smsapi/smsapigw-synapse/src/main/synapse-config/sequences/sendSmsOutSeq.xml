@@ -16,10 +16,11 @@
 	        mc.setProperty('SEND_SMS_OPERATOR_REQUEST_ID', operatorRequestId); 
 	        
 	        var resourceUrl = smsRetrieveResourceUrlPrefix + '/' + encodedSenderAddress + '/requests/' + requestId;
-	        payload.outboundSMSMessageRequest.resourceURL = resourceUrl;
-	        payload.outboundSMSMessageRequest.deliveryInfoList.resourceURL = resourceUrl + '/deliveryInfos';
+	        payload.outboundSMSMessageRequest.resourceURL = String(resourceUrl);
+	        payload.outboundSMSMessageRequest.deliveryInfoList.resourceURL = String(resourceUrl + '/deliveryInfos');
 	        
-	        mc.setPayloadJSON(payload);
+	        var stringifiedPayload = JSON.stringify(payload);
+	        mc.setPayloadJSON(stringifiedPayload);
           "/>
     </class>
     <class name="com.wso2telco.dep.mediator.impl.smsmessaging.SendSMSRequestIdPersistMediator"/>
