@@ -16,7 +16,7 @@
 
 	<property expression="get-property('SYSTEM_TIME')" name="STARTNASHORNMEDIATOR" scope="default" type="LONG" xmlns:ns="http://org.apache.synapse/xsd"/>
 
-	<class name="com.wso2telco.gateway.payment.mediation.ClientCorelatorMediator"/>
+	<class name="com.wso2telco.dep.mediator.impl.payment.ClientCorelatorMediator"/>
 
         <property expression="get-property('SYSTEM_TIME')" name="INSEQ_END" scope="default" type="LONG" xmlns:ns="http://org.apache.synapse/xsd"/>
        
