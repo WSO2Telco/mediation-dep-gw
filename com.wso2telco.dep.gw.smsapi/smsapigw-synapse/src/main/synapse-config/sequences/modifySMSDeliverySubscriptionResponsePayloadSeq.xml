@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="modifySMSDeliverySubscriptionResponsePayloadSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
     <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
-            var hubGateway = mc.getProperty('hubGateway');
-    		var requestResourceUrl = mc.getProperty('REST_FULL_REQUEST_PATH');
-    		var subscriptionID = mc.getProperty('subscriptionID');
- 			payload.deliveryReceiptSubscription.resourceURL = hubGateway + requestResourceUrl + "/" + subscriptionID;
-	    	payload.deliveryReceiptSubscription.callbackReference.notifyURL = mc.getProperty('originalNotifyURL');
-	 		mc.setPayloadJSON(payload);]]></script>
+        var hubGateway = mc.getProperty('hubGateway');
+    	var subResourcePath = mc.getProperty('REST_SUB_REQUEST_PATH');
+        var apiContext = mc.getProperty('REST_API_CONTEXT');
+        var apiVersion = mc.getProperty('VERSION');
+    	var subscriptionID = mc.getProperty('subscriptionID');
+ 		payload.deliveryReceiptSubscription.resourceURL = hubGateway + apiContext + "/" + apiVersion + subResourcePath + "/" + subscriptionID;
+	    payload.deliveryReceiptSubscription.callbackReference.notifyURL = mc.getProperty('originalNotifyURL');
+	 	mc.setPayloadJSON(payload);]]>
+	</script>
 </sequence>
