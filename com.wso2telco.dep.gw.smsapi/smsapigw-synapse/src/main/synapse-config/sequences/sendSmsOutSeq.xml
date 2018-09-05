@@ -15,6 +15,9 @@
 		mc.setProperty('SEND_SMS_OPERATOR_REQUEST_ID', operatorRequestId); 
 		
 		var resourceUrl = smsRetrieveResourceUrlPrefix + '/' + encodedSenderAddress + '/requests/' + requestId;
+		if (mc.getProperty('originalNotifyURL')) {
+			payload.outboundSMSMessageRequest.receiptRequest.notifyURL = mc.getProperty('originalNotifyURL');
+		}
 		payload.outboundSMSMessageRequest.resourceURL = resourceUrl;
 		payload.outboundSMSMessageRequest.deliveryInfoList.resourceURL = resourceUrl + '/deliveryInfos';
 		
