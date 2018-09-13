@@ -20,6 +20,9 @@
         <case regex="201">
             <sequence key="sendSmsOutSeq"/>
         </case>
+        <case regex="200">
+            <sequence key="sendSameSmsOutSeq"/>
+        </case>
         <default/>
     </switch>
     <respond/>
