@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="persistTransactionSeq" onError="commonFault" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+<dbreport>
+    <connection>
+        <pool>
+            <dsName>jdbc/WSO2TELCO_DEP_DB</dsName>
+        </pool>
+    </connection>
+    <statement>
+        <sql><![CDATA[insert into spendlimittrans(consumerKey,msisdn,amount,currency) values(?,?,?,?)]]></sql>
+        <parameter expression="$ctx:CONSUMER_KEY" type="VARCHAR"/>
+        <parameter expression="fn:substring-after($ctx:MSISDN,'tel:+')" type="VARCHAR"/>
+        <parameter expression="$ctx:chargeAmount" type="DECIMAL"/>
+        <parameter expression="//currency" type="VARCHAR"/>
+    </statement>
+</dbreport>
+</sequence>
