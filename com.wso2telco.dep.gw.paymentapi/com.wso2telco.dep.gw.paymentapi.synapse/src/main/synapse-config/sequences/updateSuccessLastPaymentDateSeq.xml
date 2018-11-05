@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="updateSuccessLastPaymentDateSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <sequence key="com.wso2telco.dep.subscriptionapi.main.request.Sequence"/>
+    <!-- Parameter for retrieving -->
+    <property expression="json-eval($.appId)" name="appId" scope="default" type="STRING"/>
+    <property expression="json-eval($.msisdn)" name="msisdn" scope="default" type="STRING"/>
+    <property expression="json-eval($.)" name="ORIGINAL_PAYLOAD" scope="default" type="STRING"/>
+    <!-- retrieve endpoint from registry -->
+    <property expression="$ctx:subscriptionEngineConfig//mandateServer/updateLastPaymentTimeURL" name="API_ENDPOINT" scope="default" type="STRING"/>
+    <sequence key="com.wso2telco.dep.subscriptionapi.mandate.call.Sequence"/>
+    <filter regex="200|201" source="get-property('axis2', 'HTTP_SC')">
+        <then/>
+        <else>
+            <log level="full">
+                <property name="ERROR_MSG" value="Failure in mandate engine"/>
+            </log>
+        </else>
+    </filter>
+    <sequence key="com.wso2telco.dep.common.main.response.Sequence"/>
+</sequence>
