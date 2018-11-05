@@ -1,0 +1,5 @@
+<subscriptionEngineConfig>
+	<mandateServer>
+		<updateLastPaymentTimeURL>http://your_mandate_engine_updateLastPaymentTime_URL_here</updateLastPaymentTimeURL>
+	</mandateServer>
+</subscriptionEngineConfig>

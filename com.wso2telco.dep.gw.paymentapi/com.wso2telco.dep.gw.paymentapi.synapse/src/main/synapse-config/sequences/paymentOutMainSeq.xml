@@ -12,6 +12,8 @@
         <case regex="(AmountChargeHandler|AmountRefundHandler)">
             <switch source="$axis2:HTTP_SC">
                 <case regex="(200|201)">
+                    <sequence key="persistTransactionSeq"/>
+                    <sequence key="updateSuccessLastPaymentDateSeq"/>
                     <sequence key="replaceResourceURLSeq"/>
                 </case>
                 <default/>

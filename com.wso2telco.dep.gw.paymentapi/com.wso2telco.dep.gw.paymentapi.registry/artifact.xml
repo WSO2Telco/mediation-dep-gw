@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="subscriptionEngineConfig_xml" groupId="com.example.com.wso2telco.dep.gw.paymentapi.registry.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>subscriptionEngineConfig.xml</file>
+            <path>/_system/governance/custom</path>
+            <mediaType>application/xml</mediaType>
+        </item>
+    </artifact>
+</artifacts>
