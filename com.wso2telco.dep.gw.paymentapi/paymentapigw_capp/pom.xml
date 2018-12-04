@@ -2,14 +2,9 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.wso2telco.dep.gw</groupId>
-    <artifactId>com.wso2telco.dep.gw.paymentapi</artifactId>
-    <version>2.0.0-rc7</version>
-  </parent>
-  <groupId>paymentapigw_capp</groupId>
+  <groupId>com.example.paymentapigw_capp</groupId>
   <artifactId>paymentapigw_capp</artifactId>
-  <version>2.0.0-rc7</version>
+  <version>1.0.0</version>
   <packaging>carbon/application</packaging>
   <name>paymentapigw_capp</name>
   <description>paymentapigw_capp</description>
