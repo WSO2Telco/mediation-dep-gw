@@ -47,13 +47,4 @@
     <artifact name="replaceResourceURLSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/replaceResourceURLSeq.xml</file>
     </artifact>
-    <artifact name="persistTransactionSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/persistTransactionSeq.xml</file>
-    </artifact>
-    <artifact name="updateSuccessLastPaymentDateSeq" groupId="com.wso2telco.dep.gw.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/updateSuccessLastPaymentDateSeq.xml</file>
-    </artifact>
-    <artifact name="authenticatePaymentCall" groupId="com.wso2telco.dep.gw.sequence" version="2.0.0-rc7" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/authenticatePaymentCall.xml</file>
-    </artifact>
 </artifacts>

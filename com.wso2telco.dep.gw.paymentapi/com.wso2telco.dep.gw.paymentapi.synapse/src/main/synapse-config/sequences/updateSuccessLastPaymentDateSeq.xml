@@ -15,7 +15,7 @@
       </format>
         <args/>
     </payloadFactory>
-    <property expression="$ctx:depGWConfig//mandateServer/updateLastPaymentTimeURL" name="API_ENDPOINT" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+    <property expression="$ctx:adaptorConfig//mandateServer/updateLastPaymentTimeURL" name="API_ENDPOINT" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
     <sequence key="com.wso2telco.dep.subscriptionapi.mandate.call.Sequence"/>
     <filter regex="200|201" source="get-property('axis2', 'HTTP_SC')" xmlns:ns="http://org.apache.synapse/xsd">
         <then/>
