@@ -15,10 +15,7 @@
   <description>com.wso2telco.dep.gw.paymentapi</description>
   <modules>
     <module>com.wso2telco.dep.gw.paymentapi.synapse</module>
-    <module>paymentapigw_capp</module>
-    <module>paymentapigw_capp</module>
-    <module>paymentapigw_capp</module>
-    <module>paymentapigw_capp</module>
+    <module>com.wso2telco.dep.gw.paymentapi.registry.resources</module>
     <module>paymentapigw_capp</module>
   </modules>
   <properties>

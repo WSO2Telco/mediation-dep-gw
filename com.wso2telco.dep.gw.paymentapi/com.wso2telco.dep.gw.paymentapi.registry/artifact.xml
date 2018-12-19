@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="depGWConfig_xml" groupId="com.example.com.wso2telco.dep.gw.paymentapi.registry.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
-        <item>
-            <file>depGWConfig.xml</file>
-            <path>/_system/config/repository/wso2telco/configurations</path>
-            <mediaType>application/xml</mediaType>
-        </item>
-    </artifact>
-</artifacts>
