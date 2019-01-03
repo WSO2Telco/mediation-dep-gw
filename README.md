@@ -6,6 +6,7 @@ The deployment consists of configuring 2 products:
 
 1. wso2esb
 2. wso2telcohub
+3. wso2telcoids-2.4.0-rc2
 
 ## Configuring WSO2 ESB
 Download a fresh __WSO2 ESB 5.0.0__ pack from website: http://wso2.com/products/enterprise-service-bus/
@@ -123,5 +124,8 @@ If MSISDN blacklist,whitelist feature please add the following handlers to api.x
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
    </handlers>
    ```
+
+## Configuring wso2telcoids
+Please refer: [JWT Token Handler Readme](https://docs.wso2telco.com/pages/viewpage.action?spaceKey=MI&title=JWT+Token+Handler)
 
 
