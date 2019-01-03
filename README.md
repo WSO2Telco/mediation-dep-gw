@@ -57,6 +57,10 @@ prodUMdb : http://docs.wso2telco.com/display/HG/Setup+++User+Manager+database
 
 Clone this repository and build using maven ($ mvn clean install)
 
+Before building the payment CApp file
+* Configure Mandate Engine URLs in registry-resource file
+   Location: com.wso2telco.dep.gw.paymentapi/paymentapigw_capp/target/paymentapigw_capp.car/depGWConfig.xml_1.0.0-SNAPSHOT/resources/depGWConfig.xml
+
 There will be 5 CApp files (.car files) created in following locations
 ```
 * mediation-dep-gw/com.wso2telco.dep.gw.common/commongw_capp/target/commongw_capp.car
