@@ -2,9 +2,7 @@
 <sequence name="authenticatePaymentCall" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
     <property expression="$trp:Authorization" name="auth-header" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
     <property expression="$trp:X-JWT-Assertion" name="jwt-header" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
-    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-        <property name="script" value="var String = Java.type('java.lang.String');         var temp_auth = mc.getProperty('jwt-header').trim();         var val= temp_auth.split('.');         var auth=val[1];         var jsonObj = JSON.parse(new String(Packages.org.apache.commons.codec.binary.Base64.decodeBase64(auth),'UTF-8'));         mc.setProperty('mobile1',jsonObj['mobile']); mc.setProperty('mobile1',jsonObj['mobile']); mc.setProperty('trustedstatus1',jsonObj['trustedstatus']);"/>
-    </class>
+    <class name="com.wso2telco.dep.mediator.JWTDecoder"/>
     <property expression="fn:substring-after($ctx:MSISDN,'tel:+')" name="msisdn" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
     <filter regex="normal" source="get-property('trustedstatus1')" xmlns:ns="http://org.apache.synapse/xsd">
         <then>

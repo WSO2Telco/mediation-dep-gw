@@ -18,12 +18,6 @@
         </then>
         <else/>
     </filter>
-    <switch source="get-property('CONTEXT')" xmlns:ns="http://org.apache.synapse/xsd">
-        <case regex="$ctx:SUB_CONTEXT">
-            <sequence key="authenticatePaymentCall"/>
-        </case>
-        <default/>
-    </switch>
     <switch source="get-property('HANDLER')" xmlns:ns="http://org.apache.synapse/xsd">
         <case regex="QueryPaymentStatusHandler">
             <sequence key="paymentStatusSeq"/>
