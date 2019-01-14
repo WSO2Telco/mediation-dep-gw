@@ -10,7 +10,7 @@
     <filter xmlns:ns="http://org.apache.synapse/xsd" xpath="fn:contains($ctx:trustedstatus1,'normal')">
         <then>
             <log level="custom">
-                <property name="trustedstatus" value="Normal User"/>
+                 <property name="trustedstatus" value="Normal User"/>
             </log>
             <filter xpath="fn:contains($ctx:mobile1,$ctx:msisdn)">
                 <then/>
