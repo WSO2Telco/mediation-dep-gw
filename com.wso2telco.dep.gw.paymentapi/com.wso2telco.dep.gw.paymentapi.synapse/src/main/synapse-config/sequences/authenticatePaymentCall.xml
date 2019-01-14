@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sequence name="authenticatePaymentCall" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <property expression="$trp:Authorization" name="auth-header" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
-    <property expression="$trp:X-JWT-Assertion" name="jwt-header" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+<sequence name="authenticatePaymentCall" xmlns="http://ws.apache.org/ns/synapse">
+    <property expression="$trp:Authorization" name="auth-header"
+        scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+    <property expression="$trp:X-JWT-Assertion" name="jwt-header"
+        scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
     <class name="com.wso2telco.dep.mediator.JWTDecoder"/>
-    <property expression="fn:substring-after($ctx:MSISDN,'tel:+')" name="msisdn" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
-    <filter regex="normal" source="get-property('trustedstatus1')" xmlns:ns="http://org.apache.synapse/xsd">
+    <property expression="fn:substring-after($ctx:MSISDN,'tel:+')"
+        name="msisdn" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+    <filter xmlns:ns="http://org.apache.synapse/xsd" xpath="fn:contains($ctx:trustedstatus1,'normal')">
         <then>
             <log level="custom">
                 <property name="trustedstatus" value="Normal User"/>
             </log>
-            <filter xpath="get-property('mobile1') != $ctx:msisdn">
-                <then>
+            <filter xpath="fn:contains($ctx:mobile1,$ctx:msisdn)">
+                <then/>
+                <else>
                     <log level="full">
                         <property name="ERROR_MSG" value="Failure in mobile number validation."/>
                     </log>
                     <property action="remove" name="TRANSPORT_HEADERS" scope="axis2"/>
-                    <property name="httpStatusCode" scope="default" type="STRING" value="500"/>
-                    <property name="exceptionType" scope="default" type="STRING" value="POLICY_EXCEPTION"/>
-                    <property name="messageId" scope="default" type="STRING" value="POL0299"/>
-                    <property name="errorText" scope="default" type="STRING" value="Failure in mobile number validation."/>
-                    <property name="errorVariable" scope="default" type="STRING" value=""/>
+                    <property name="httpStatusCode" scope="default"
+                        type="STRING" value="500"/>
+                    <property name="exceptionType" scope="default"
+                        type="STRING" value="POLICY_EXCEPTION"/>
+                    <property name="messageId" scope="default"
+                        type="STRING" value="POL0299"/>
+                    <property name="errorText" scope="default"
+                        type="STRING" value="Failure in mobile number validation."/>
+                    <property name="errorVariable" scope="default"
+                        type="STRING" value=""/>
                     <sequence key="com.wso2telco.dep.common.response.exceptions.Sequence"/>
-                </then>
-                <else/>
+                </else>
             </filter>
         </then>
         <else>
