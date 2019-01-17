@@ -1,42 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sequence name="authenticatePaymentCall" xmlns="http://ws.apache.org/ns/synapse">
-    <property expression="$trp:Authorization" name="auth-header"
-        scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
-    <property expression="$trp:X-JWT-Assertion" name="jwt-header"
-        scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
-    <class name="com.wso2telco.dep.mediator.JWTDecoder"/>
-    <property expression="fn:substring-after($ctx:MSISDN,'tel:+')"
-        name="msisdn" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
-    <filter xmlns:ns="http://org.apache.synapse/xsd" xpath="fn:contains($ctx:trustedstatus1,'normal')">
-        <then>
-            <log level="custom">
-                 <property name="trustedstatus" value="Normal User"/>
-            </log>
-            <filter xpath="fn:contains($ctx:mobile1,$ctx:msisdn)">
-                <then/>
-                <else>
-                    <log level="full">
-                        <property name="ERROR_MSG" value="Failure in mobile number validation."/>
-                    </log>
-                    <property action="remove" name="TRANSPORT_HEADERS" scope="axis2"/>
-                    <property name="httpStatusCode" scope="default"
-                        type="STRING" value="500"/>
-                    <property name="exceptionType" scope="default"
-                        type="STRING" value="POLICY_EXCEPTION"/>
-                    <property name="messageId" scope="default"
-                        type="STRING" value="POL0299"/>
-                    <property name="errorText" scope="default"
-                        type="STRING" value="Failure in mobile number validation."/>
-                    <property name="errorVariable" scope="default"
-                        type="STRING" value=""/>
-                    <sequence key="com.wso2telco.dep.common.response.exceptions.Sequence"/>
-                </else>
-            </filter>
-        </then>
-        <else>
-            <log level="custom">
-                <property name="trustedstatus" value="Fullytrusted/trusted User"/>
-            </log>
-        </else>
-    </filter>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="authenticatePaymentCall">
+   <property xmlns:ns="http://org.apache.synapse/xsd" expression="$trp:Authorization" name="auth-header" scope="default" type="STRING" />
+   <property xmlns:ns="http://org.apache.synapse/xsd" expression="$trp:X-JWT-Assertion" name="jwt-header" scope="default" type="STRING" />
+   <class name="com.wso2telco.dep.mediator.JWTDecoder" />
+   <property xmlns:ns="http://org.apache.synapse/xsd" expression="fn:substring-after($ctx:MSISDN,'tel:+')" name="msisdn" scope="default" type="STRING" />
+   <filter xmlns:ns="http://org.apache.synapse/xsd" xpath="fn:contains($ctx:trustedstatus1,'normal')">
+      <then>
+         <log level="custom">
+            <property name="trustedstatus" value="Normal User" />
+         </log>
+         <filter xpath="fn:contains($ctx:mobile1,$ctx:msisdn)">
+            <then />
+            <else>
+               <log level="full">
+                  <property name="ERROR_MSG" value="Failure in mobile number validation." />
+               </log>
+               <property action="remove" name="TRANSPORT_HEADERS" scope="axis2" />
+               <property name="httpStatusCode" scope="default" type="STRING" value="500" />
+               <property name="exceptionType" scope="default" type="STRING" value="POLICY_EXCEPTION" />
+               <property name="messageId" scope="default" type="STRING" value="POL0299" />
+               <property name="errorText" scope="default" type="STRING" value="Failure in mobile number validation." />
+               <property name="errorVariable" scope="default" type="STRING" value="" />
+               <sequence key="com.wso2telco.dep.common.response.exceptions.Sequence" />
+            </else>
+         </filter>
+      </then>
+      <else>
+         <log level="custom">
+            <property name="trustedstatus" value="Fullytrusted/trusted User" />
+         </log>
+      </else>
+   </filter>
 </sequence>
