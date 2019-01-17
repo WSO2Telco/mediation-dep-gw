@@ -15,6 +15,7 @@
     <filter xmlns:ns="http://org.apache.synapse/xsd" xpath="get-property('CONTEXT') = $ctx:SUB_CONTEXT">
         <then>
             <sequence key="authenticatePaymentCall"/>
+            <sequence key="com.wso2telco.dep.subscriptionapi.mandate.validatePayment.Sequence"/>
         </then>
         <else/>
     </filter>
