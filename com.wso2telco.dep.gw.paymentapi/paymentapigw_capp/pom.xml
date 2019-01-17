@@ -20,7 +20,7 @@
     <com.wso2telco.dep.gw.sequence_._checkLimitError>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitError>
     <com.wso2telco.dep.gw.sequence_._checkLimitSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._checkLimitSeq>
     <com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentOutMainSeq>
-    <com.wso2telco.dep.gw.resource_._depGWConfig_xml>capp/EnterpriseIntegrator</com.wso2telco.dep.gw.resource_._depGWConfig_xml>
+    <com.wso2telco.dep.gw.resource_._depGWConfig_xml>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.resource_._depGWConfig_xml>
     <com.wso2telco.dep.gw.sequence_._authenticatePaymentCall>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._authenticatePaymentCall>
     <com.wso2telco.dep.gw.sequence_._paymentChargeSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentChargeSeq>
     <com.wso2telco.dep.gw.sequence_._paymentListTransactionsSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._paymentListTransactionsSeq>
