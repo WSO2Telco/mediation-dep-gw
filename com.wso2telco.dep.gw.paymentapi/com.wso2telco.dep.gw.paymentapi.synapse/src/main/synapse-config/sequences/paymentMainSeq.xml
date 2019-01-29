@@ -4,6 +4,8 @@
     <property expression="$ctx:adaptorConfig//subscriptionEndpointContext" name="SUB_CONTEXT" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
     <property expression="get-property('SYSTEM_TIME')" name="INSEQ_START" scope="default" type="LONG" xmlns:ns="http://org.apache.synapse/xsd"/>
     <property expression="json-eval($.amountTransaction.clientCorrelator)" name="originalClientCorrelator" scope="default" type="STRING"/>
+    <property expression="json-eval($.amountTransaction.paymentAmount.chargingInformation.amount)" name="chargingAmount" scope="default" type="STRING"/>
+    <property expression="json-eval($.amountTransaction.paymentAmount.chargingInformation.currency)" name="currency" scope="default" type="STRING"/>
     <sequence key="apiPropertySeq"/>
     <property expression="get-property('SYSTEM_TIME')" name="STARTCLASSMEDIATOR" scope="default" type="LONG" xmlns:ns="http://org.apache.synapse/xsd"/>
     <class name="com.wso2telco.dep.mediator.HandlerMediator">
