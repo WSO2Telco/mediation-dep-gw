@@ -9,15 +9,15 @@
                     <dbreport>
                         <connection>
                             <pool>
-                                <dsName>jdbc/WSO2TELCO_DEP_DB</dsName>
+                                <dsName>jdbc/WSO2TELCO_SUBSCRIPTION_ENGINE_DB</dsName>
                             </pool>
                         </connection>
                         <statement>
                             <sql><![CDATA[insert into persisttansaction(consumerKey,msisdn,amount,currency) values(?,?,?,?)]]></sql>
                             <parameter expression="$ctx:CONSUMER_KEY" type="VARCHAR"/>
                             <parameter expression="fn:substring-after($ctx:MSISDN,'tel:+')" type="VARCHAR"/>
-                            <parameter expression="$ctx:chargeAmount" type="DECIMAL"/>
-                            <parameter expression="//currency" type="VARCHAR"/>
+                            <parameter expression="$ctx:chargingAmount" type="DECIMAL"/>
+                            <parameter expression="$ctx:currency" type="VARCHAR"/>
                         </statement>
                     </dbreport>
                 </then>

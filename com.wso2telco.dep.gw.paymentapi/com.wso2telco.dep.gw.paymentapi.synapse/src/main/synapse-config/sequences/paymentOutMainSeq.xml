@@ -12,8 +12,19 @@
         <case regex="(AmountChargeHandler|AmountRefundHandler)">
             <switch source="$axis2:HTTP_SC">
                 <case regex="(200|201)">
-                    <sequence key="persistTransactionSeq"/>
-                    <sequence key="updateSuccessLastPaymentDateSeq"/>
+                    <filter xpath="get-property('CONTEXT') = $ctx:SUB_CONTEXT">
+                        <then>
+                            <property expression="json-eval($.)" name="REQUEST_PAYLOAD" scope="default" type="STRING"/>
+                            <sequence key="persistTransactionSeq"/>
+                            <payloadFactory media-type="json">
+                                <format>
+				    "$ctx:REQUEST_PAYLOAD"
+				</format>
+                                <args/>
+                            </payloadFactory>
+                        </then>
+                        <else/>
+                    </filter>
                     <sequence key="replaceResourceURLSeq"/>
                 </case>
                 <default/>
