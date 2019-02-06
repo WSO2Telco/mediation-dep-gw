@@ -16,12 +16,6 @@
                         <then>
                             <property expression="json-eval($.)" name="REQUEST_PAYLOAD" scope="default" type="STRING"/>
                             <sequence key="persistTransactionSeq"/>
-                            <payloadFactory media-type="json">
-                                <format>
-				    "$ctx:REQUEST_PAYLOAD"
-				</format>
-                                <args/>
-                            </payloadFactory>
                         </then>
                         <else/>
                     </filter>
