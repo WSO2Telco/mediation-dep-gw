@@ -15,8 +15,18 @@
                 </connection>
                 <statement>
                     <sql><![CDATA[delete from mo_ussd_subscription where ussd_request_did=?;]]></sql>
-                    <parameter expression="get-property('subscriptionId')"
-                               type="VARCHAR" />
+                    <parameter expression="get-property('subscriptionId')" type="VARCHAR" />
+                </statement>
+            </dbreport>
+            <dbreport>
+                <connection>
+                    <pool>
+                        <dsName>jdbc/WSO2TELCO_DEP_DB</dsName>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[delete from ussd_request_entry where ussd_request_did=?;]]></sql>
+                    <parameter expression="get-property('subscriptionId')" type="VARCHAR"/>
                 </statement>
             </dbreport>
         </case>
