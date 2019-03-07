@@ -7,8 +7,6 @@
   <header name="sandbox" scope="transport" value="admin"/>
   <header expression="get-property('auth-header')"
           name="Authorization" scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
-  <header expression="get-property('jwt-header')"
-          name="x-jwt-assertion" scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
   <send>
     <endpoint key="defaultPaymentEndpoint"/>
   </send>
