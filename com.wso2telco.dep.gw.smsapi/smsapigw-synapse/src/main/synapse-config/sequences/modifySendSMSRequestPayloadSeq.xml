@@ -3,7 +3,8 @@
         <property expression="json-eval($.outboundSMSMessageRequest.receiptRequest.notifyURL)" name="originalNotifyURL" scope="default" type="STRING"/>
         <script language="js">
                 <![CDATA[var payload= mc.getPayloadJSON();
-    	        payload.outboundSMSMessageRequest.receiptRequest.notifyURL = mc.getProperty('notifyURL');
- 		mc.setPayloadJSON(payload);]]>
+    	        payload.outboundSMSMessageRequest.receiptRequest.notifyURL = String(mc.getProperty('notifyURL'));
+    	        var stringifiedPayload = JSON.stringify(payload);
+                mc.setPayloadJSON(stringifiedPayload);]]>
         </script>
 </sequence>
