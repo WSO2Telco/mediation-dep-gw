@@ -7,11 +7,11 @@
     name="adaptorConfig" scope="default" type="OM" xmlns:ns="http://org.apache.synapse/xsd"/>
   <payloadFactory media-type="json">
     <format>
-          {
-            "appId":"$ctx:APPLICATION_ID",
-            "msisdn":"$ctx:msisdn"
-          }
-      </format>
+			{
+			"appId":"$ctx:APPLICATION_ID",
+			"msisdn":"$ctx:msisdn"
+			}
+		</format>
     <args/>
   </payloadFactory>
   <property
