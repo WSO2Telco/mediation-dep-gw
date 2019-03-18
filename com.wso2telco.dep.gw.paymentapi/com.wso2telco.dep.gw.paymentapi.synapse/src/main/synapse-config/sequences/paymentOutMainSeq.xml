@@ -6,21 +6,20 @@
         <case regex="(200|201)">
           <sequence key="replaceResourceURLForListSeq"/>
         </case>
-        <default/>
-      </switch>
-    </case>
-    <case regex="(AmountChargeHandler|AmountRefundHandler)">
-      <switch source="$axis2:HTTP_SC">
-        <case regex="(200|201)">
-          <filter xpath="get-property('CONTEXT') = $ctx:SUB_CONTEXT">
-            <then>
-              <property expression="json-eval($.)"
-                name="REQUEST_PAYLOAD" scope="default" type="STRING"/>
-              <sequence key="persistTransactionSeq"/>
-            </then>
-            <else/>
-          </filter>
-          <sequence key="replaceResourceURLSeq"/>
+        <case regex="(AmountChargeHandler|AmountRefundHandler)">
+            <switch source="$axis2:HTTP_SC">
+                <case regex="(200|201)">
+                    <filter xpath="get-property('CONTEXT') = $ctx:SUB_CONTEXT">
+                        <then>
+                            <property expression="json-eval($.)" name="REQUEST_PAYLOAD" scope="default" type="STRING"/>
+                            <sequence key="persistTransactionSeq"/>
+                        </then>
+                        <else/>
+                    </filter>
+                    <sequence key="replaceResourceURLSeq"/>
+                </case>
+                <default/>
+            </switch>
         </case>
         <default/>
       </switch>
