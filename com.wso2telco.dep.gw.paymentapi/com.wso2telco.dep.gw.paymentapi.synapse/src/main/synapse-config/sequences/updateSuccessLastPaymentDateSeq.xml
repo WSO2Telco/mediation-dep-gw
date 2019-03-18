@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="updateSuccessLastPaymentDateSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <sequence key="com.wso2telco.dep.common.main.property.Sequence"/>
-    <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
-    <property expression="get-property('registry', 'conf:/repository/wso2telco/configurations/depGWConfig.xml')" name="adaptorConfig" scope="default" type="OM" xmlns:ns="http://org.apache.synapse/xsd"/>
-    <payloadFactory media-type="json">
-        <format>
+  <sequence key="com.wso2telco.dep.common.main.property.Sequence"/>
+  <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
+  <property
+    expression="get-property('registry', 'conf:/repository/wso2telco/configurations/depGWConfig.xml')"
+    name="adaptorConfig" scope="default" type="OM" xmlns:ns="http://org.apache.synapse/xsd"/>
+  <payloadFactory media-type="json">
+    <format>
           {
             "appId":"$ctx:APPLICATION_ID",
             "msisdn":"$ctx:msisdn"
           }
       </format>
-        <args/>
-    </payloadFactory>
-    <property expression="$ctx:adaptorConfig//mandateServer/updateLastPaymentTimeURL" name="API_ENDPOINT" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
-    <sequence key="com.wso2telco.dep.subscriptionapi.mandate.call.Sequence"/>
-    <filter regex="200|201" source="get-property('axis2', 'HTTP_SC')" xmlns:ns="http://org.apache.synapse/xsd">
-        <then/>
-        <else>
-            <log level="full">
-                <property name="ERROR_MSG" value="Failure in mandate engine"/>
-            </log>
-        </else>
-    </filter>
+    <args/>
+  </payloadFactory>
+  <property
+    expression="$ctx:adaptorConfig//mandateServer/updateLastPaymentTimeURL"
+    name="API_ENDPOINT" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+  <sequence key="com.wso2telco.dep.subscriptionapi.mandate.call.Sequence"/>
+  <filter regex="200|201" source="get-property('axis2', 'HTTP_SC')" xmlns:ns="http://org.apache.synapse/xsd">
+    <then/>
+    <else>
+      <log level="full">
+        <property name="ERROR_MSG" value="Failure in mandate engine"/>
+      </log>
+    </else>
+  </filter>
 </sequence>

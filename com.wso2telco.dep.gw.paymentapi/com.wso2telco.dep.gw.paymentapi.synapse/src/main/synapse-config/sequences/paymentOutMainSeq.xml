@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="paymentOutMainSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <switch source="get-property('HANDLER')" xmlns:ns="http://org.apache.synapse/xsd">
-        <case regex="ListTransactionsHandler">
-            <switch source="$axis2:HTTP_SC">
-                <case regex="(200|201)">
-                    <sequence key="replaceResourceURLForListSeq"/>
-                </case>
-                <default/>
-            </switch>
-        </case>
-        <case regex="(AmountChargeHandler|AmountRefundHandler)">
-            <switch source="$axis2:HTTP_SC">
-                <case regex="(200|201)">
-                    <filter xpath="get-property('CONTEXT') = $ctx:SUB_CONTEXT">
-                        <then>
-                            <property expression="json-eval($.)" name="REQUEST_PAYLOAD" scope="default" type="STRING"/>
-                            <sequence key="persistTransactionSeq"/>
-                        </then>
-                        <else/>
-                    </filter>
-                    <sequence key="replaceResourceURLSeq"/>
-                </case>
-                <default/>
-            </switch>
+  <switch source="get-property('HANDLER')" xmlns:ns="http://org.apache.synapse/xsd">
+    <case regex="ListTransactionsHandler">
+      <switch source="$axis2:HTTP_SC">
+        <case regex="(200|201)">
+          <sequence key="replaceResourceURLForListSeq"/>
         </case>
         <default/>
-    </switch>
+      </switch>
+    </case>
+    <case regex="(AmountChargeHandler|AmountRefundHandler)">
+      <switch source="$axis2:HTTP_SC">
+        <case regex="(200|201)">
+          <filter xpath="get-property('CONTEXT') = $ctx:SUB_CONTEXT">
+            <then>
+              <property expression="json-eval($.)"
+                name="REQUEST_PAYLOAD" scope="default" type="STRING"/>
+              <sequence key="persistTransactionSeq"/>
+            </then>
+            <else/>
+          </filter>
+          <sequence key="replaceResourceURLSeq"/>
+        </case>
+        <default/>
+      </switch>
+    </case>
+    <default/>
+  </switch>
 </sequence>
