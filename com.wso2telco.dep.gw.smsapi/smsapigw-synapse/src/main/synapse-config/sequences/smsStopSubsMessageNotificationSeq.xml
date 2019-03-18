@@ -18,6 +18,11 @@
                     <parameter expression="get-property('subscriptionId')"
                                type="VARCHAR" />
                 </statement>
+                <statement>
+                    <sql><![CDATA[delete from subscriptions where mo_subscription_did=?;]]></sql>
+                    <parameter
+                        expression="get-property('subscriptionId')" type="VARCHAR"/>
+                </statement>
             </dbreport>
         </case>
         <default />
