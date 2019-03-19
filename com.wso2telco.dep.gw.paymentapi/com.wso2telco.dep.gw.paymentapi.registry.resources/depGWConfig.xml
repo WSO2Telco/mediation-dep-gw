@@ -1,0 +1,6 @@
+<depGWConfig>
+	<mandateServer>
+		<updateLastPaymentTimeURL>http://your_mandate_engine_updateLastPaymentTime_URL_here</updateLastPaymentTimeURL>
+	</mandateServer>
+	<subscriptionEndpointContext>Subscription Engine Endpoint Configured Context</subscriptionEndpointContext>
+</depGWConfig>
