@@ -47,7 +47,4 @@
     <artifact name="replaceResourceURLSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.1-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/replaceResourceURLSeq.xml</file>
     </artifact>
-    <artifact name="mandateCheckSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.1-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/mandateCheckSeq.xml</file>
-    </artifact>
 </artifacts>

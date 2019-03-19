@@ -27,6 +27,8 @@
     <com.wso2telco.dep.gw.api_._ussdAPI>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._ussdAPI>
     <com.wso2telco.dep.gw.sequence_._SendUssdSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._SendUssdSeq>
     <com.wso2telco.dep.gw.endpoint_._USSDInboundSeqEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._USSDInboundSeqEndpoint>
+
+    <com.wso2telco.dep.gw.sequence_._ModifySendUSSDRequestPayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifySendUSSDRequestPayloadSeq>    <com.wso2telco.dep.gw.sequence_._ModifySendUSSDResponsePayloadSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._ModifySendUSSDResponsePayloadSeq>
   </properties>
   <dependencies>
     <dependency>
@@ -99,6 +101,18 @@
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>USSDMainSeq</artifactId>
       <version>2.1.1-SNAPSHOT</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>ModifySendUSSDRequestPayloadSeq</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+   <dependency>
+      <groupId>com.wso2telco.dep.gw.sequence</groupId>
+      <artifactId>ModifySendUSSDResponsePayloadSeq</artifactId>
+      <version>1.0.0</version>
       <type>xml</type>
     </dependency>
   </dependencies>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="persistTransactionSeq" onError="commonFault"
+  trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+  <property expression="fn:normalize-space(get-property('direction'))"
+    name="direction" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+  <property expression="fn:normalize-space(get-property('HANDLER'))"
+    name="normalizedHandler" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+  <filter regex="AmountChargeHandler" source="get-property('HANDLER')" xmlns:ns="http://org.apache.synapse/xsd">
+    <then>
+      <filter regex="(200|201)" source="$axis2:HTTP_SC">
+        <then>
+            <filter regex="(200|201)" source="$axis2:HTTP_SC">
+                <then>
+                    <dbreport>
+                        <connection>
+                            <pool>
+                                <dsName>jdbc/WSO2TELCO_SUBSCRIPTION_ENGINE_DB</dsName>
+                            </pool>
+                        </connection>
+                        <statement>
+                            <sql><![CDATA[insert into persisttansaction(consumerKey,msisdn,amount,currency) values(?,?,?,?)]]></sql>
+                            <parameter expression="$ctx:CONSUMER_KEY" type="VARCHAR"/>
+                            <parameter expression="fn:substring-after($ctx:MSISDN,'tel:+')" type="VARCHAR"/>
+                            <parameter expression="$ctx:chargingAmount" type="DECIMAL"/>
+                            <parameter expression="$ctx:currency" type="VARCHAR"/>
+                        </statement>
+                    </dbreport>
+                </then>
+                <else/>
+            </filter>
+    </then>
+    <else/>
+  </filter>
+</sequence>

@@ -8,6 +8,7 @@ The deployment consists of configuring 2 products:
 
 1. wso2esb
 2. wso2telcohub
+3. wso2telcoids-2.4.0-rc2
 
 ## Configuring WSO2 ESB
 Download a fresh __WSO2 ESB 5.0.0__ pack from website: http://wso2.com/products/enterprise-service-bus/
@@ -60,6 +61,10 @@ prodUMdb : http://docs.wso2telco.com/display/HG/Setup+++User+Manager+database
 *Important: Same databases are referred while setting up __wso2telcohub__*
 
 Clone this repository and build using maven ($ mvn clean install)
+
+Before building the payment CApp file
+* Configure Mandate Engine URLs in registry-resource file
+   Location: com.wso2telco.dep.gw.paymentapi/paymentapigw_capp/target/paymentapigw_capp.car/depGWConfig.xml_1.0.0-SNAPSHOT/resources/depGWConfig.xml
 
 There will be 5 CApp files (.car files) created in following locations
 ```
@@ -130,5 +135,8 @@ Eg:
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
    </handlers>
    ```
+
+## Configuring wso2telcoids
+Please refer: [JWT Token Handler Readme](https://docs.wso2telco.com/pages/viewpage.action?spaceKey=MI&title=JWT+Token+Handler)
 
 

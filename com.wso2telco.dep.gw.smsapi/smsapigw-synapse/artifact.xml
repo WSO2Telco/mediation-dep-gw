@@ -145,4 +145,16 @@
 		<file>src/main/synapse-config/sequences/subscribeToSMSDeliveryNotificationsSeq.xml</file>
 	</artifact>
 
+	<artifact name="ModifySendSMSRequestPayloadSeq"
+		groupId="com.wso2telco.dep.gw.sequence" version="1.0.0"
+		type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		<file>src/main/synapse-config/sequences/modifySendSMSRequestPayloadSeq.xml</file>
+	</artifact>
+	<artifact name="SendSameSmsOutSeq"
+			  groupId="com.wso2telco.dep.gw.sequence" version="1.0.0"
+			  type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		<file>src/main/synapse-config/sequences/sendSameSmsOutSeq.xml</file>
+	</artifact>
+
+
 </artifacts>

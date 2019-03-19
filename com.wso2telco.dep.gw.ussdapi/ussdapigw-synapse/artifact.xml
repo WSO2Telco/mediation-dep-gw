@@ -59,6 +59,15 @@
 		version="2.1.1-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/ussdMOSubscribeSeq.xml</file>
 	</artifact>
-	
+
+	<artifact name="ModifySendUSSDRequestPayloadSeq" groupId="com.wso2telco.dep.gw.sequence"
+			  version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		<file>src/main/synapse-config/sequences/modifySendUSSDRequestPayloadSeq.xml</file>
+	</artifact>
+
+	<artifact name="ModifySendUSSDResponsePayloadSeq" groupId="com.wso2telco.dep.gw.sequence"
+			  version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		<file>src/main/synapse-config/sequences/modifySendUSSDResponsePayloadSeq.xml</file>
+	</artifact>
 
 </artifacts>
