@@ -4,11 +4,11 @@
           <property name="script" value="
             var payload= mc.getPayloadJSON();
             var hubGateway = mc.getProperty('hubGateway');
-        var subResourcePath = mc.getProperty('REST_SUB_REQUEST_PATH');
-        var apiContext = mc.getProperty('REST_API_CONTEXT');
-        var apiVersion = mc.getProperty('VERSION');
+            var subResourcePath = mc.getProperty('REST_SUB_REQUEST_PATH');
+            var apiContext = mc.getProperty('REST_API_CONTEXT');
+            var apiVersion = mc.getProperty('VERSION');
     		var subscriptionID = mc.getProperty('subscriptionID');
-        payload.subscription.resourceURL = hubGateway + apiContext + "/" + apiVersion + subResourcePath + "/" + subscriptionID;
+        payload.subscription.resourceURL = hubGateway + apiContext + '/' + apiVersion + subResourcePath + '/' + subscriptionID;
 	    	payload.subscription.callbackReference.notifyURL = mc.getProperty('originalNotifyURL');
             mc.setPayloadJSON(payload);
           "/>
