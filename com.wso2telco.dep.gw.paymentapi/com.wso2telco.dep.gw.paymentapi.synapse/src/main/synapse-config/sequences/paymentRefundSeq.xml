@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="paymentRefundSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <sequence key="mandateCheckSeq"/>
     <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
     <header expression="get-property('ENDPOINT')" name="To" scope="default"/>
     <send>
