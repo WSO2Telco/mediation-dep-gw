@@ -2,156 +2,156 @@
 <artifacts>
 
 	<artifact name="smsAPI" groupId="com.wso2telco.dep.gw.api"
-		version="2.1.0-SNAPSHOT" type="synapse/api" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/api" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/api/smsApi.xml</file>
 	</artifact>
 
 	<artifact name="DefaultSMSEndpoint" groupId="com.wso2telco.dep.gw.endpoint"
-		version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/defaultSMSEndpoint.xml</file>
 	</artifact>
 
 	<artifact name="SendSmsEp" groupId="com.wso2telco.dep.gw.endpoint"
-		version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/sendSmsEp.xml</file>
 	</artifact>
 
 	<artifact name="SMSInboundNotificationEp" groupId="com.wso2telco.dep.gw.endpoint"
-	version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+	version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/smsInboundNotificationEp.xml</file>
 	</artifact>
 
 	<artifact name="SMSQueryDeliveryStatusEndpoint" groupId="com.wso2telco.dep.gw.endpoint"
-		version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/smsQueryDeliveryStatusEndpoint.xml</file>
 	</artifact>
 
 	<artifact name="SMSRetrievalSeqEndpoint" groupId="com.wso2telco.dep.gw.endpoint"
-		version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/smsRetrievalSeqEndpoint.xml</file>
 	</artifact>
 
 	<artifact name="SMSStopSubsDeliveryNotificationEndpoint"
-		groupId="com.wso2telco.dep.gw.endpoint" version="2.1.0-SNAPSHOT"
+		groupId="com.wso2telco.dep.gw.endpoint" version="3.0.0-SNAPSHOT"
 		type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/smsStopSubsDeliveryNotificationEndpoint.xml</file>
 	</artifact>
 
 	<artifact name="ModifyMSDeliverySubscriptionRequestPayloadSeq"
-		groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT"
+		groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT"
 		type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/modifySMSDeliverySubscriptionRequestPayloadSeq.xml</file>
 	</artifact>
 
 	<artifact name="ModifySMSDeliverySubscriptionResponsePayloadSeq"
-		groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT"
+		groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT"
 		type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/modifySMSDeliverySubscriptionResponsePayloadSeq.xml</file>
 	</artifact>
 
 	<artifact name="ModifySMSNotificationSubscriptionRequestPayloadSeq"
-		groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT"
+		groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT"
 		type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/modifySMSNotificationSubscriptionRequestPayloadSeq.xml</file>
 	</artifact>
 
 	<artifact name="ModifySMSNotificationSubscriptionResponsePayloadSeq"
-		groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT"
+		groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT"
 		type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/modifySMSNotificationSubscriptionResponsePayloadSeq.xml</file>
 	</artifact>
 
 	<artifact name="SendSMSDeliveryNotificationsSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/sendSMSDeliveryNotificationsSeq.xml</file>
 	</artifact>
 
 	<artifact name="SendSmsOutSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/sendSmsOutSeq.xml</file>
 	</artifact>
 
 	<artifact name="sendSmsSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/sendSmsSeq.xml</file>
 	</artifact>
 
 	<artifact name="smsInboundNotificationHandlerSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsInboundNotificationHandlerSeq.xml</file>
 	</artifact>
 
 	<artifact name="smsInboundSubscriptionSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsInboundSubscriptionSeq.xml</file>
 	</artifact>
 
 	<artifact name="smsMainSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsMainSeq.xml</file>
 	</artifact>
 
 	<artifact name="SMSQueryDeliveryStatusResponseSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsQueryDeliveryStatusResponseSeq.xml</file>
 	</artifact>
 
 
 	<artifact name="SMSQueryDeliveryStatusSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsQueryDeliveryStatusSeq.xml</file>
 	</artifact>
 
 	<artifact name="SMSRetrieveOutSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsRetrieveOutSeq.xml</file>
 	</artifact>
 
 	<artifact name="SMSRetrieveSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsRetrieveSeq.xml</file>
 	</artifact>
 
 	<artifact name="SMSStopSubsDeliveryNotificationResponseSeq"
-		groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT"
+		groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT"
 		type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsStopSubsDeliveryNotificationResponseSeq.xml</file>
 	</artifact>
 
 	<artifact name="SMSStopSubsDeliveryNotificationSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsStopSubsDeliveryNotificationSeq.xml</file>
 	</artifact>
 
 
 	<artifact name="SMSStopSubsMessageNotificationSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/smsStopSubsMessageNotificationSeq.xml</file>
 	</artifact>
 
 	<artifact name="StoreSMSDeliverySubscriptionSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/storeSMSDeliverySubscriptionSeq.xml</file>
 	</artifact>
 
 	<artifact name="StoreSMSNotificationSubscriptionSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/storeSMSNotificationSubscriptionSeq.xml</file>
 	</artifact>
 
 	<artifact name="SubscribeToSMSDeliveryNotificationsSeq"
-		groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT"
+		groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT"
 		type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/subscribeToSMSDeliveryNotificationsSeq.xml</file>
 	</artifact>
 
 	<artifact name="ModifySendSMSRequestPayloadSeq"
-		groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT"
+		groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT"
 		type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/modifySendSMSRequestPayloadSeq.xml</file>
 	</artifact>
 	<artifact name="SendSameSmsOutSeq"
-			  groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT"
+			  groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT"
 			  type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/sendSameSmsOutSeq.xml</file>
 	</artifact>

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="apiPropertySeq" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="apiPropertySeq" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/apiPropertySeq.xml</file>
     </artifact>
-    <artifact name="commonFault" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="commonFault" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/commonFault.xml</file>
     </artifact>
-    <artifact name="com.wso2telco.dep.common.response.exceptions.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="com.wso2telco.dep.common.response.exceptions.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.response.exceptions.Sequence.xml</file>
     </artifact>
-    <artifact name="com.wso2telco.dep.common.response.unexpectedError.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="com.wso2telco.dep.common.response.unexpectedError.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.response.unexpectedError.Sequence.xml</file>
     </artifact>
-    <artifact name="commonAPI" groupId="com.wso2telco.dep.gw.common.synapse.api" version="2.1.0-SNAPSHOT" type="synapse/api" serverRole="EnterpriseServiceBus">
+    <artifact name="commonAPI" groupId="com.wso2telco.dep.gw.common.synapse.api" version="3.0.0-SNAPSHOT" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/commonAPI.xml</file>
     </artifact>
-    <artifact name="com.wso2telco.dep.common.msisdnValidation.service.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="com.wso2telco.dep.common.msisdnValidation.service.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.msisdnValidation.service.Sequence.xml</file>
     </artifact>
-    <artifact name="com.wso2telco.dep.common.validationRegex.service.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="com.wso2telco.dep.common.validationRegex.service.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.validationRegex.service.Sequence.xml</file>
     </artifact>
 </artifacts>

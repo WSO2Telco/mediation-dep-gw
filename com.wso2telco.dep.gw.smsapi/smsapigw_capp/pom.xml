@@ -5,11 +5,11 @@
   <parent>
     <groupId>com.wso2telco.dep.gw</groupId>
     <artifactId>com.wso2telco.dep.gw.smsapi</artifactId>
-    <version>2.1.0-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>smsapigw_capp</artifactId>
-  <version>2.1.0-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <packaging>carbon/application</packaging>
   <name>smsapigw_capp</name>
   <description>smsapigw_capp</description>
@@ -49,175 +49,175 @@
     <dependency>
       <groupId>com.wso2telco.dep.gw.api</groupId>
       <artifactId>smsAPI</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>DefaultSMSEndpoint</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>SMSInboundNotificationEp</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>SMSQueryDeliveryStatusEndpoint</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>SMSRetrievalSeqEndpoint</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>SMSStopSubsDeliveryNotificationEndpoint</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>SendSmsEp</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>ModifyMSDeliverySubscriptionRequestPayloadSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>ModifySMSDeliverySubscriptionResponsePayloadSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>ModifySMSNotificationSubscriptionRequestPayloadSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>ModifySMSNotificationSubscriptionResponsePayloadSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SMSQueryDeliveryStatusResponseSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SMSQueryDeliveryStatusSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SMSRetrieveOutSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SMSRetrieveSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SMSStopSubsDeliveryNotificationResponseSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SMSStopSubsDeliveryNotificationSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SMSStopSubsMessageNotificationSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SendSMSDeliveryNotificationsSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SendSmsOutSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>StoreSMSDeliverySubscriptionSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>StoreSMSNotificationSubscriptionSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SubscribeToSMSDeliveryNotificationsSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>sendSmsSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>smsInboundNotificationHandlerSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>smsInboundSubscriptionSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>smsMainSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>ModifySendSMSRequestPayloadSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SendSameSmsOutSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
   </dependencies>

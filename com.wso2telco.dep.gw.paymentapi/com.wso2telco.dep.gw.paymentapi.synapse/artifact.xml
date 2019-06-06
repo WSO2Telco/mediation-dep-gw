@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="paymentApi" groupId="com.wso2telco.dep.gw.api" version="2.1.0-SNAPSHOT" type="synapse/api" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentApi" groupId="com.wso2telco.dep.gw.api" version="3.0.0-SNAPSHOT" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/paymentApi.xml</file>
     </artifact>
-    <artifact name="defaultPaymentEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+    <artifact name="defaultPaymentEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/defaultPaymentEndpoint.xml</file>
     </artifact>
-    <artifact name="paymentStatusSeqEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentStatusSeqEndpoint" groupId="com.wso2telco.dep.gw.endpoint" version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/paymentStatusSeqEndpoint.xml</file>
     </artifact>
-    <artifact name="chargeRequestSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="chargeRequestSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/chargeRequestSeq.xml</file>
     </artifact>
-    <artifact name="checkLimitError" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="checkLimitError" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/checkLimitError.xml</file>
     </artifact>
-    <artifact name="checkLimitSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="checkLimitSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/checkLimitSeq.xml</file>
     </artifact>
-    <artifact name="dropSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="dropSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/dropSeq.xml</file>
     </artifact>
-    <artifact name="filterCheckLimitSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="filterCheckLimitSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/filterCheckLimitSeq.xml</file>
     </artifact>
-    <artifact name="paymentChargeSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentChargeSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/paymentChargeSeq.xml</file>
     </artifact>
-    <artifact name="paymentListTransactionsSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentListTransactionsSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/paymentListTransactionsSeq.xml</file>
     </artifact>
-    <artifact name="paymentMainSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentMainSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/paymentMainSeq.xml</file>
     </artifact>
-    <artifact name="paymentOutMainSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentOutMainSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/paymentOutMainSeq.xml</file>
     </artifact>
-    <artifact name="paymentRefundSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentRefundSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/paymentRefundSeq.xml</file>
     </artifact>
-    <artifact name="paymentStatusSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="paymentStatusSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/paymentStatusSeq.xml</file>
     </artifact>
-    <artifact name="replaceResourceURLForListSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="replaceResourceURLForListSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/replaceResourceURLForListSeq.xml</file>
     </artifact>
-    <artifact name="replaceResourceURLSeq" groupId="com.wso2telco.dep.gw.sequence" version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+    <artifact name="replaceResourceURLSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/replaceResourceURLSeq.xml</file>
     </artifact>
 </artifacts>

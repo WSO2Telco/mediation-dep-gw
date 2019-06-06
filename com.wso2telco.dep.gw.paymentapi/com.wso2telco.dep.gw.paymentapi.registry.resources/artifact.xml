@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="depGWConfig_xml" groupId="com.wso2telco.dep.gw.resource" version="2.1.0-SNAPSHOT" type="registry/resource" serverRole="EnterpriseIntegrator">
+    <artifact name="depGWConfig_xml" groupId="com.wso2telco.dep.gw.resource" version="3.0.0-SNAPSHOT" type="registry/resource" serverRole="EnterpriseIntegrator">
         <item>
             <file>depGWConfig.xml</file>
             <path>/_system/config/repository/wso2telco/configurations</path>

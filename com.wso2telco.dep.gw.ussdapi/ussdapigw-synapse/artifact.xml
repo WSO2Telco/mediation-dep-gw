@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <artifacts>
 	<artifact name="ussdAPI" groupId="com.wso2telco.dep.gw.api"
-		version="2.1.0-SNAPSHOT" type="synapse/api" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/api" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/api/ussdApi.xml</file>
 	</artifact>
 
 	<artifact name="DefaultUSSDEndpoint" groupId="com.wso2telco.dep.gw.endpoint"
-		version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/defaultUSSDEndpoint.xml</file>
 	</artifact>
 
 	<artifact name="SendUssdSeqEndpoint" groupId="com.wso2telco.dep.gw.endpoint"
-		version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/sendUssdSeqEndpoint.xml</file>
 	</artifact>
 
 	<artifact name="USSDInboundSeqEndpoint" groupId="com.wso2telco.dep.gw.endpoint"
-		version="2.1.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/endpoints/ussdInboundSeqEndpoint.xml</file>
 	</artifact>
 
 	<artifact name="ModifyUSSDResponseSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/modifyUSSDResponseSeq.xml</file>
 	</artifact>
 
 	<artifact name="SendUssdSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/sendUssdSeq.xml</file>
 	</artifact>
 
 	<artifact name="USSDInboundResponseSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/ussdInboundResponseSeq.xml</file>
 	</artifact>
 	
 	<artifact name="USSDInboundSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/ussdInboundSeq.xml</file>
 	</artifact>
 
 	<artifact name="USSDMainOutSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/ussdMainOutSeq.xml</file>
 	</artifact>
 	
 		<artifact name="USSDMainSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/ussdMainSeq.xml</file>
 	</artifact>
 
 		<artifact name="USSDMOStopSubscriptionSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/ussdMOStopSubscriptionSeq.xml</file>
 	</artifact>
 	
 			<artifact name="USSDMOSubscribeSeq" groupId="com.wso2telco.dep.gw.sequence"
-		version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/ussdMOSubscribeSeq.xml</file>
 	</artifact>
 
 	<artifact name="ModifySendUSSDRequestPayloadSeq" groupId="com.wso2telco.dep.gw.sequence"
-			  version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+			  version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/modifySendUSSDRequestPayloadSeq.xml</file>
 	</artifact>
 
 	<artifact name="ModifySendUSSDResponsePayloadSeq" groupId="com.wso2telco.dep.gw.sequence"
-			  version="2.1.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+			  version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
 		<file>src/main/synapse-config/sequences/modifySendUSSDResponsePayloadSeq.xml</file>
 	</artifact>
 

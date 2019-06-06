@@ -5,11 +5,11 @@
   <parent>
     <groupId>com.wso2telco.dep.gw</groupId>
     <artifactId>com.wso2telco.dep.gw.locationapi</artifactId>
-    <version>2.1.0-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>locationapigw_capp</artifactId>
-  <version>2.1.0-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <packaging>carbon/application</packaging>
   <name>locationapigw_capp</name>
   <description>locationapigw_capp</description>
@@ -36,19 +36,19 @@
     <dependency>
       <groupId>com.wso2telco.dep.gw.api</groupId>
       <artifactId>locationAPI</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>locationOperatorEndpoint</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>locationSeq</artifactId>
-      <version>2.1.0-SNAPSHOT</version>
+      <version>3.0.0-SNAPSHOT</version>
       <type>xml</type>
     </dependency>
   </dependencies>
