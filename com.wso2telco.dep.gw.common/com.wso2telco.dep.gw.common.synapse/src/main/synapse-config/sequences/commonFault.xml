@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="commonFault" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
     <log level="custom">
-		<property name="STATUS" value="Executing faut handling sequence"/>
+		<property name="STATUS" value="Executing fault handling sequence"/>
     </log>
     <log level="full"/>
     <switch source="$ctx:ERROR_CODE">

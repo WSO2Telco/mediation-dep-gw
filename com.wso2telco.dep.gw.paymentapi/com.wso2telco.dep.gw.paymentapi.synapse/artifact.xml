@@ -11,17 +11,8 @@
     <artifact name="chargeRequestSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/chargeRequestSeq.xml</file>
     </artifact>
-    <artifact name="checkLimitError" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/checkLimitError.xml</file>
-    </artifact>
-    <artifact name="checkLimitSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/checkLimitSeq.xml</file>
-    </artifact>
     <artifact name="dropSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/dropSeq.xml</file>
-    </artifact>
-    <artifact name="filterCheckLimitSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/filterCheckLimitSeq.xml</file>
     </artifact>
     <artifact name="paymentChargeSeq" groupId="com.wso2telco.dep.gw.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/paymentChargeSeq.xml</file>

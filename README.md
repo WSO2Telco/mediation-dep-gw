@@ -41,9 +41,6 @@ Add following configuration files:
 * *MobileCountryConfig.xml* to *ESB_HOME/repository/conf* 
 (repository: https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/MobileCountryConfig.xml)
 
-* *spendLimit.xml* to *ESB_HOME/repository/conf* 
-(repository:https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/spendLimit.xml)
-
 * *oneapi-validation-conf.properties* to *ESB_HOME/repository/conf* 
 (repository:https://github.com/WSO2Telco/component-dep/blob/master/features/com.wso2telco.dep.hub.core.feature/src/main/resources/config/oneapi-validation-conf.properties)
 
