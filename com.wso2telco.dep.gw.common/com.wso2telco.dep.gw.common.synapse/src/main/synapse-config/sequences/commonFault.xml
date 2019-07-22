@@ -682,5 +682,10 @@
     <property action="remove" name="ContentType" scope="axis2"/>
     <property name="TRANSPORT_HEADERS" action="remove" scope="axis2"/>
     <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="RESPONSEOUT"/>
+    </call-template>
+
     <send/>
 </sequence>

@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="locationSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
     <sequence key="apiPropertySeq"/>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="REQUESTIN"/>
+    </call-template>
+
     <class description="" name="com.wso2telco.dep.mediator.HandlerMediator">
         <property name="executorClass" value="com.wso2telco.dep.mediator.impl.LocationExecutor"/>
     </class>
     <header expression="get-property('ENDPOINT')" name="To" scope="default"/>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="REQUESTOUT"/>
+    </call-template>
+
     <send>
         <endpoint key="locationOperatorEndpoint"/>
     </send>

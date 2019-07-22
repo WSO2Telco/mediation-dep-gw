@@ -2,6 +2,12 @@
 <api context="/smsmessaging" name="smsApi" xmlns="http://ws.apache.org/ns/synapse">
     <resource methods="DELETE POST PUT GET" url-mapping="/*" inSequence="smsMainSeq" faultSequence="commonFault">
         <outSequence>
+            <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+                <with-param name="direction" value="RESPONSEIN"/>
+            </call-template>
+            <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+                <with-param name="direction" value="RESPONSEOUT"/>
+            </call-template>
             <send/>
         </outSequence>
     </resource>

@@ -8,5 +8,10 @@
     scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
   <header expression="get-property('jwt-header')" name="x-jwt-assertion"
     scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
+
+  <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+      <with-param name="direction" value="REQUESTOUT"/>
+  </call-template>
+
   <send/>
 </sequence>

@@ -19,14 +19,29 @@ mc.setPayloadJSON(payload);]]></script>
         </then>
         <else/>
     </filter>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+      <with-param name="direction" value="REQUESTOUT"/>
+    </call-template>
+
     <call>
         <endpoint key="sendUssdSeqEndpoint"/>
     </call>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+ 		<with-param name="direction" value="RESPONSEIN"/>
+	</call-template>
+
     <filter source="boolean(get-property('originalNotifyURL'))" regex="true">
         <then>
            <sequence key="modifySendUSSDResponsePayloadSeq"/>
         </then>
         <else/>
     </filter>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+ 		<with-param name="direction" value="RESPONSEOUT"/>
+	</call-template>
+
     <respond/>
 </sequence>
