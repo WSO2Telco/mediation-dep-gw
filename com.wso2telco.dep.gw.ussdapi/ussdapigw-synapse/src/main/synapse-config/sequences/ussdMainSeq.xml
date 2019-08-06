@@ -9,6 +9,16 @@
     <class name="com.wso2telco.dep.mediator.HandlerMediator">
         <property name="executorClass" value="com.wso2telco.dep.mediator.impl.ussd.USSDExecutor"/>
     </class>
+    <filter xpath="boolean($ctx:MSISDN)">
+        <then>
+            <!-- validate the msisdn for black list and white list -->
+            <call-template target="com.wso2telco.dep.common.blacklistWhitelistValidator.Template">
+                <with-param name="paramName" value="address"/>
+                <with-param name="paramValue" value="{$ctx:MSISDN}"/>
+            </call-template>
+        </then>
+        <else/>
+    </filter>
     <switch source="get-property('HANDLER')">
         <case regex="SendUSSDHandler">
             <sequence key="sendUssdSeq"/>
