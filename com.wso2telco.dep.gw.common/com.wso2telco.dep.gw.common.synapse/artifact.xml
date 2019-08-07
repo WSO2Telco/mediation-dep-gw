@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="apiPropertySeq" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/apiPropertySeq.xml</file>
-    </artifact>
     <artifact name="com.wso2telco.dep.common.response.exceptions.Sequence" groupId="com.wso2telco.dep.gw.common.synapse.sequence" version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/com.wso2telco.dep.common.response.exceptions.Sequence.xml</file>
     </artifact>

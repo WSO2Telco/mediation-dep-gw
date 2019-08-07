@@ -5,7 +5,7 @@
         <with-param name="direction" value="REQUESTIN"/>
     </call-template>
 
-    <sequence key="apiPropertySeq"/>
+    <sequence key="com.wso2telco.dep.common.main.property.Sequence"/>
     <class description="HandlerMediatorClass" name="com.wso2telco.dep.mediator.HandlerMediator">
         <property name="executorClass" value="com.wso2telco.dep.mediator.impl.smsmessaging.SMSExecutor"/>
     </class>
