@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/ussd" name="ussdApi" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="DELETE POST PUT GET" url-mapping="/*" inSequence="ussdMainSeq" faultSequence="commonFault">
+    <resource methods="DELETE POST PUT GET" url-mapping="/*" inSequence="ussdMainSeq" faultSequence="com.wso2telco.dep.common.response.fault.Sequence">
         <outSequence>
             <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
                 <with-param name="direction" value="RESPONSEIN"/>

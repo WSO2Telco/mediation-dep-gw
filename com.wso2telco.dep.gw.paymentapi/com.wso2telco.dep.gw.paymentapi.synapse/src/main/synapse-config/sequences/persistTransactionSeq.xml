@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sequence name="persistTransactionSeq" onError="commonFault"
+<sequence name="persistTransactionSeq" onError="com.wso2telco.dep.common.response.fault.Sequence"
   trace="disable" xmlns="http://ws.apache.org/ns/synapse">
   <property expression="fn:normalize-space(get-property('direction'))"
     name="direction" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
