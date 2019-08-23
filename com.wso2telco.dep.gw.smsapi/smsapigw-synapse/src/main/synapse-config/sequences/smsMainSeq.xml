@@ -14,7 +14,7 @@
             <!-- validate the msisdn for black list and white list -->
             <call-template target="com.wso2telco.dep.common.blacklistWhitelistValidator.Template">
                 <with-param name="paramName" value="address"/>
-                <with-param name="paramValue" value="{$ctx:MSISDN}"/>
+                <with-param name="paramValue" value="{get-property('MSISDN')}"/>
             </call-template>
         </then>
         <else/>
