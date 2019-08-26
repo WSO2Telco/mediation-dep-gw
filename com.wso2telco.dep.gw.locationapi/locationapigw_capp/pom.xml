@@ -19,12 +19,9 @@
     <com.wso2telco.dep.gw.locationapi.synapse_._locationOperatorEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.locationapi.synapse_._locationOperatorEndpoint>
     <com.wso2telco.dep.gw.synapse.endpoints_._locationOperatorEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.synapse.endpoints_._locationOperatorEndpoint>
     <com.wso2telco.dep.gw.sequence_._locationSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequence_._locationSeq>
-    <com.wso2telco.dep.gw.locationapi.synapse_._apiPropertySeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.locationapi.synapse_._apiPropertySeq>
     <com.wso2telco.dep.gw.endpoints_._locationOperatorEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoints_._locationOperatorEndpoint>
     <com.wso2telco.dep.gw.endpoint_._locationOperatorEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.endpoint_._locationOperatorEndpoint>
-    <com.wso2telco.dep.gw.locationapi.synapse.sequences_._apiPropertySeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.locationapi.synapse.sequences_._apiPropertySeq>
     <com.wso2telco.dep.gw.locationapi.synapse_._locationSeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.locationapi.synapse_._locationSeq>
-    <com.wso2telco.dep.gw.sequences_._apiPropertySeq>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.sequences_._apiPropertySeq>
     <com.wso2telco.dep.gw.api_._locationAPI>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.api_._locationAPI>
     <com.wso2telco.dep.gw.locationapi.synapse_._locationAPI>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.locationapi.synapse_._locationAPI>
     <com.wso2telco.dep.gw.locationapi.synapse.endpoints_._locationOperatorEndpoint>capp/EnterpriseServiceBus</com.wso2telco.dep.gw.locationapi.synapse.endpoints_._locationOperatorEndpoint>

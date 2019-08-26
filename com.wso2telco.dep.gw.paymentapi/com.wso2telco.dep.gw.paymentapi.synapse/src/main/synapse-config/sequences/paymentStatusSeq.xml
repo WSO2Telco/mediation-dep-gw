@@ -3,8 +3,18 @@
     <!--log level="custom">
         <property name="********* ENDPOINT *********"  expression="get-property('ENDPOINT')"/>
     </log-->
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="REQUESTIN"/>
+    </call-template>
+
     <property name="REST_URL_POSTFIX" action="remove" scope="axis2"/>
     <header expression="get-property('ENDPOINT')" name="To" scope="default" />
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="REQUESTOUT"/>
+    </call-template>
+
     <send>
        <endpoint key="paymentStatusSeqEndpoint"/>
      </send>

@@ -13,9 +13,19 @@
             </log>
         </else>
     </filter>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="REQUESTOUT"/>
+    </call-template>
+
     <call>
         <endpoint key="sendSmsEp"/>
     </call>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="RESPONSEIN"/>
+    </call-template>
+
     <switch source="$axis2:HTTP_SC">
         <case regex="201">
             <sequence key="sendSmsOutSeq"/>
@@ -25,5 +35,10 @@
         </case>
         <default/>
     </switch>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="RESPONSEOUT"/>
+    </call-template>
+
     <respond/>
 </sequence>

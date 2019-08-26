@@ -6,9 +6,19 @@
     <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
     	payload.subscription.callbackReference.notifyURL = mc.getProperty('subsEndPoint');
  		mc.setPayloadJSON(payload);]]></script>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="REQUESTOUT"/>
+    </call-template>
+
     <call>
         <endpoint key="defaultUSSDEndpoint"/>
     </call>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="RESPONSEIN"/>
+    </call-template>
+
     <switch source="$axis2:HTTP_SC">
         <case regex="(200|201)">
             <property expression="json-eval($.subscription.resourceURL)" name="resourceURL" scope="default" type="STRING"/>
@@ -29,5 +39,10 @@
         </case>
         <default/>
     </switch>
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="RESPONSEOUT"/>
+    </call-template>
+
     <respond/>
 </sequence>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/payment" name="paymentApi" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="DELETE POST PUT GET" url-mapping="/*" inSequence="paymentMainSeq" faultSequence="commonFault">
+    <resource methods="DELETE POST PUT GET" url-mapping="/*" inSequence="paymentMainSeq" faultSequence="com.wso2telco.dep.common.response.fault.Sequence">
         <outSequence>
             <sequence key="paymentOutMainSeq"/>
             <respond/>

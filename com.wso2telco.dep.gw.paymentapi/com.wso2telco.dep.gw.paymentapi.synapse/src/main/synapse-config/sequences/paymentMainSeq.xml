@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="paymentMainSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+
+    <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
+        <with-param name="direction" value="REQUESTIN"/>
+    </call-template>
+
     <property expression="get-property('registry', 'conf:/repository/wso2telco/configurations/depGWConfig.xml')" name="adaptorConfig" scope="default" type="OM" xmlns:ns="http://org.apache.synapse/xsd"/>
     <property expression="$ctx:adaptorConfig//subscriptionEndpointContext" name="SUB_CONTEXT" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
     <property expression="get-property('SYSTEM_TIME')" name="INSEQ_START" scope="default" type="LONG" xmlns:ns="http://org.apache.synapse/xsd"/>
     <property expression="json-eval($.amountTransaction.clientCorrelator)" name="originalClientCorrelator" scope="default" type="STRING"/>
     <property expression="json-eval($.amountTransaction.paymentAmount.chargingInformation.amount)" name="chargingAmount" scope="default" type="STRING"/>
     <property expression="json-eval($.amountTransaction.paymentAmount.chargingInformation.currency)" name="currency" scope="default" type="STRING"/>
-  <sequence key="apiPropertySeq"/>
+  <sequence key="com.wso2telco.dep.common.main.property.Sequence"/>
     <property expression="get-property('SYSTEM_TIME')" name="STARTCLASSMEDIATOR" scope="default" type="LONG" xmlns:ns="http://org.apache.synapse/xsd"/>
     <class name="com.wso2telco.dep.mediator.HandlerMediator">
         <property name="executorClass" value="com.wso2telco.dep.mediator.impl.payment.PaymentExecutor"/>
@@ -18,6 +23,16 @@
         <then>
             <sequence key="authenticatePaymentCall"/>
             <sequence key="com.wso2telco.dep.subscriptionapi.mandate.validatePayment.Sequence"/>
+        </then>
+        <else/>
+    </filter>
+    <filter xpath="boolean($ctx:MSISDN)">
+        <then>
+            <!-- validate the msisdn for black list and white list -->
+            <call-template target="com.wso2telco.dep.common.blacklistWhitelistValidator.Template">
+                <with-param name="paramName" value="address"/>
+                <with-param name="paramValue" value="{get-property('MSISDN')}"/>
+            </call-template>
         </then>
         <else/>
     </filter>
