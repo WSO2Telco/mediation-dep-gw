@@ -3,9 +3,13 @@
     <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
     <header expression="get-property('ENDPOINT')" name="To" scope="default" xmlns:ns="http://org.apache.synapse/xsd"/>
     <property expression="json-eval($.subscription.callbackReference.notifyURL)" name="originalNotifyURL" scope="default" type="STRING"/>
-    <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
-    	payload.subscription.callbackReference.notifyURL = mc.getProperty('subsEndPoint');
- 		mc.setPayloadJSON(payload);]]></script>
+    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
+        <property name="script" value='
+            var payload= mc.getPayloadJSON();
+            payload.subscription.callbackReference.notifyURL = mc.getProperty("subsEndPoint");
+            mc.setPayloadJSON(payload);
+          '/>
+    </class>
 
     <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
         <with-param name="direction" value="REQUESTOUT"/>
