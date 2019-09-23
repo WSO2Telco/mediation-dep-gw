@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="modifySendUSSDRequestPayloadSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
     <property expression="json-eval($.outboundUSSDMessageRequest.responseRequest.notifyURL)" name="originalNotifyURL" scope="default" type="STRING"/>
-    <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
-    var str = mc.getProperty('outboundUSSDMessage');
-var text = str.replace("\n", "\\n").replace("\r", "\\r");
-payload.outboundUSSDMessageRequest.outboundUSSDMessage = text;
-    	payload.outboundUSSDMessageRequest.responseRequest.notifyURL = mc.getProperty('subsEndPoint');
- 	mc.setPayloadJSON(payload);]]></script>
+    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
+        <property name="script" value='
+            var payload= mc.getPayloadJSON();
+            var str = mc.getProperty("outboundUSSDMessage");
+            var text = str.replace("\n", "\\n").replace("\r", "\\r");
+            payload.outboundUSSDMessageRequest.outboundUSSDMessage = text;
+            payload.outboundUSSDMessageRequest.responseRequest.notifyURL = mc.getProperty("subsEndPoint");
+            mc.setPayloadJSON(payload);
+          '/>
+    </class>
 </sequence>

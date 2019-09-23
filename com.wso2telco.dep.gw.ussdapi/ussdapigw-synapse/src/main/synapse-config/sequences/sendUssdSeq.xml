@@ -11,11 +11,15 @@
     </filter>
     <filter source="boolean(get-property('originalNotifyURL'))" regex="false">
         <then>
-            <script language="js"><![CDATA[var payload= mc.getPayloadJSON();
-var str = mc.getProperty('outboundUSSDMessage');
-var text = str.replace("\n", "\\n").replace("\r", "\\r");
-payload.outboundUSSDMessageRequest.outboundUSSDMessage = text;
-mc.setPayloadJSON(payload);]]></script>
+            <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
+                <property name="script" value='
+                var payload= mc.getPayloadJSON();
+                var str = mc.getProperty("outboundUSSDMessage");
+                var text = str.replace("\n", "\\n").replace("\r", "\\r");
+                payload.outboundUSSDMessageRequest.outboundUSSDMessage = text;
+                mc.setPayloadJSON(payload);
+                '/>
+            </class>
         </then>
         <else/>
     </filter>
