@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="modifySMSDeliverySubscriptionResponsePayloadSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-          <property name="script" value='
-            var payload= mc.getPayloadJSON();
-            var hubGateway = mc.getProperty("hubGateway");
-            var subResourcePath = mc.getProperty("REST_SUB_REQUEST_PATH");
-            var apiContext = mc.getProperty("REST_API_CONTEXT");
-            var apiVersion = mc.getProperty("VERSION");
-    		var subscriptionID = mc.getProperty("subscriptionID");
-            payload.deliveryReceiptSubscription.resourceURL = hubGateway + apiContext + "/" + apiVersion + subResourcePath + "/" + subscriptionID;
-	    	payload.deliveryReceiptSubscription.callbackReference.notifyURL = mc.getProperty("originalNotifyURL");
-            mc.setPayloadJSON(payload);
-          '/>
+
+    <property name="propertyReplacement" expression="fn:concat(syn:get-property('hubGateway'), '/', syn:get-property('REST_FULL_REQUEST_PATH'), '/', syn:get-property('subscriptionID'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+    <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+        <property name="propertyValue" value="singlePropertyReplacement"/>
+        <property name="propertyName" value="resourceURL"/>
+        <property name="propertyPath" value="payload.deliveryReceiptSubscription.resourceURL"/>
+        <property name="msgContextProperty" value="propertyReplacement"/>
+    </class>
+
+    <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+        <property name="propertyPath" value="payload.deliveryReceiptSubscription.callbackReference.notifyURL"/>
+        <property name="propertyValue" value="singlePropertyReplacement"/>
+        <property name="propertyName" value="notifyURL"/>
+        <property name="msgContextProperty" value="originalNotifyURL"/>
     </class>
 </sequence>

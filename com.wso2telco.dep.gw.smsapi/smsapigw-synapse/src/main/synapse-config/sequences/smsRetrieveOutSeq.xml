@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="smsRetrieveOutSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-          <property name="script" value="
-	        var payload= mc.getPayloadJSON();
-	        var gatewayResourceUrlPrefix = mc.getProperty('GATEWAY_RESOURCE_URL_PREFIX');
-	        var smsRetrieveResourceUrlPrefix = mc.getProperty('SMS_RETRIEVE_GATEWAY_RESOURCE_URL_PREFIX');
-	        var resourceUrlPrefix;
-	        if (smsRetrieveResourceUrlPrefix) {
-	            resourceUrlPrefix = smsRetrieveResourceUrlPrefix.trim();
-	        } else if (gatewayResourceUrlPrefix) {
-	            resourceUrlPrefix = gatewayResourceUrlPrefix.trim() + mc.getProperty('CONTEXT') + '/inbound/registrations'
-	        } else {
-	            throw 'ERROR - Unable to find valid value for SMS_RETRIEVE_GATEWAY_RESOURCE_URL_PREFIX and GATEWAY_RESOURCE_URL_PREFIX from message ctxt';
-	        }
-	        var requestId = mc.getProperty('REQUEST_ID').trim();
-	        
-	        var messages = payload.inboundSMSMessageList.inboundSMSMessage;
-	        for (var i in messages) {
-	            var messageId = messages[i].messageId;
-	            var registrationId = messages[i].destinationAddress;
-	            messages[i].resourceURL = resourceUrlPrefix + '/' + registrationId + '/' + requestId + '/' + messageId;
-	        }
-	
-	        payload.inboundSMSMessageList.resourceURL = resourceUrlPrefix + '/' + registrationId + '/' + requestId;
-	        mc.setPayloadJSON(payload);
-          "/>
+    <property name="gatewayResourceUrlPrefix" expression="get-property('GATEWAY_RESOURCE_URL_PREFIX')"/>
+    <property name="smsRetrieveResourceUrlPrefix" expression="get-property('SMS_RETRIEVE_GATEWAY_RESOURCE_URL_PREFIX')"/>
+    <filter source="boolean(get-property('smsRetrieveResourceUrlPrefix'))" regex="true">
+        <then>
+            <property name="resourceUrlPrefix" expression="get-property('smsRetrieveResourceUrlPrefix')"/>
+        </then>
+        <else>
+            <filter source="boolean(get-property('gatewayResourceUrlPrefix'))" regex="true">
+                <then>
+                    <property name="resourceUrlPrefix" expression="get-property('gatewayResourceUrlPrefix')"/>
+                </then>
+                <else>
+                    <!-- throw an error-->
+                </else>
+            </filter>
+        </else>
+    </filter>
+    <property name="requestId" expression="get-property('REQUEST_ID')"/>
+    <foreach id="foreach_messages" expression="//inboundSMSMessageList/inboundSMSMessage">
+        <sequence>
+            <property name="messageId" expression="//inboundSMSMessage/messageId"/>
+            <property name="registrationId" expression="//inboundSMSMessage/destinationAddress"/>
+            <property name="propertyReplacementIndex" expression="get-property('foreach_messages_FOREACH_COUNTER')" scope="default"/>
+            <property name="propertyReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), '/', syn:get-property('registrationId'), '/', syn:get-property('requestId'), '/', syn:get-property('messageId'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions" />
+
+            <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+                <property name="propertyValue" value="propertyReplacementInArray"/>
+                <property name="propertyName" value="resourceURL"/>
+                <property name="propertyPath" value="payload.inboundSMSMessageList.inboundSMSMessage"/>
+                <property name="msgContextProperty" value="propertyReplacement"/>
+            </class>
+        </sequence>
+    </foreach>
+
+    <property name="propertyReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), '/', syn:get-property('registrationId'), '/', syn:get-property('requestId'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions" />
+    <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+        <property name="propertyValue" value="singlePropertyReplacement"/>
+        <property name="propertyName" value="resourceURL"/>
+        <property name="propertyPath" value="inboundSMSMessageList.resourceURL"/>
+        <property name="msgContextProperty" value="propertyReplacement"/>
     </class>
 </sequence>

@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="sendSameSmsOutSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-        <property name="script" value='
-            var payload= mc.getPayloadJSON();
-            // get the request id sent from operator side
-            var responseResourceUrl = payload.outboundSMSMessageRequest.resourceURL;
-            var operatorRequestId = responseResourceUrl.substring(responseResourceUrl.lastIndexOf("/") + 1);
-            if (!operatorRequestId) {
-            throw "ERROR - Unable extract operator request id (plugin_requestid) from response";
-            }
-            // set request id sent from operator side to message context
-            mc.setProperty("SEND_SMS_OPERATOR_REQUEST_ID", operatorRequestId);
-        '/>
-    </class>
+
+    <property name="responseResourceUrl" expression="json-eval($.outboundSMSMessageRequest.resourceURL)"/>
+    <property name="operatorRequestId" expression="fn:replace(syn:get-property('responseResourceUrl'), '^.*/', '')" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+    <filter source="boolean(get-property('operatorRequestId'))" regex="false">
+        <then>
+            <log level="custom">
+                <property name="ERROR" value="Unable extract operator request id (plugin_requestid) from response"/>
+            </log>
+        </then>
+    </filter>
+
+    <property name="SEND_SMS_OPERATOR_REQUEST_ID" expression="get-property('operatorRequestId')" action="set" scope="default"/>
 		
     <class name="com.wso2telco.dep.mediator.impl.smsmessaging.SendSMSRequestIdGetMediator"/>
 
-    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-        <property name="script" value='
-            var payload= mc.getPayloadJSON();
-            var smsRetrieveResourceUrlPrefix = mc.getProperty("SEND_SMS_RESOURCE_URL_PREFIX").trim();
-            var encodedSenderAddress = mc.getProperty("ENCODED_SENDER_ADDRESS").trim();
-            var requestId = mc.getProperty("PERSISTED_REQUEST_ID").trim();
-            var resourceUrl = smsRetrieveResourceUrlPrefix + "/" + encodedSenderAddress + "/requests/" + requestId;
-            if (mc.getProperty("originalNotifyURL")) {
-            payload.outboundSMSMessageRequest.receiptRequest.notifyURL = mc.getProperty("originalNotifyURL");
-            }
-            payload.outboundSMSMessageRequest.resourceURL = resourceUrl;
-            payload.outboundSMSMessageRequest.deliveryInfoList.resourceURL = resourceUrl + "/deliveryInfos";
-            mc.setPayloadJSON(payload);
-        '/>
-    </class>
+    <property name="smsRetrieveResourceUrl" expression="fn:concat(syn:get-property('SEND_SMS_RESOURCE_URL_PREFIX'), '/', syn:get-property('ENCODED_SENDER_ADDRESS'), '/requests/', syn:get-property('PERSISTED_REQUEST_ID'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+    <property name="smsDeliveryInfoResourceUrl" expression="fn:concat(syn:get-property('smsRetrieveResourceUrl'), '/deliveryInfos')" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+
+    <filter source="boolean(get-property('originalNotifyURL'))" regex="false">
+        <then>
+            <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+                <property name="propertyValue" value="singlePropertyReplacement"/>
+                <property name="propertyName" value="smsReceiptRequestNotifyUrl"/>
+                <property name="propertyPath" value="payload.outboundSMSMessageRequest.receiptRequest.notifyURL"/>
+                <property name="msgContextProperty" value="originalNotifyURL"/>
+            </class>
+        </then>
+    </filter>
 </sequence>
