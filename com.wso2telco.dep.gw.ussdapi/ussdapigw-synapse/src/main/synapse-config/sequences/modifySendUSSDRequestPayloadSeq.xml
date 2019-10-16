@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="modifySendUSSDRequestPayloadSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <property expression="json-eval($.outboundUSSDMessageRequest.responseRequest.notifyURL)" name="originalNotifyURL" scope="default" type="STRING"/>
-    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-        <property name="script" value='
-            var payload= mc.getPayloadJSON();
-            var str = mc.getProperty("outboundUSSDMessage");
-            var text = str.replace("\n", "\\n").replace("\r", "\\r");
-            payload.outboundUSSDMessageRequest.outboundUSSDMessage = text;
-            payload.outboundUSSDMessageRequest.responseRequest.notifyURL = mc.getProperty("subsEndPoint");
-            mc.setPayloadJSON(payload);
-          '/>
+    <property expression="json-eval($.outboundUSSDMessageRequest.responseRequest.notifyURL)" name="originalNotifyURL"
+              scope="default" type="STRING"/>
+    <property expression="fn:replace(fn:replace(syn:get-property('outboundUSSDMessage'), '\n', '\\n'), '\r', '\\r')" name="propertyReplacement" scope="default" type="STRING" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+
+    <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+        <property name="propertyValue" value="singlePropertyReplacement"/>
+        <property name="propertyName" value="outboundUSSDMessage"/>
+        <property name="propertyPath" value="payload.outboundUSSDMessageRequest.outboundUSSDMessage"/>
+        <property name="msgContextProperty" value="propertyReplacement"/>
+    </class>
+
+    <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+        <property name="propertyValue" value="singlePropertyReplacement"/>
+        <property name="propertyName" value="notifyURL"/>
+        <property name="propertyPath" value="payload.outboundUSSDMessageRequest.responseRequest.notifyURL"/>
+        <property name="msgContextProperty" value="subsEndPoint"/>
     </class>
 </sequence>
