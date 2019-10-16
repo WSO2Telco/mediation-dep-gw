@@ -13,14 +13,14 @@
 
     <property name="SEND_SMS_OPERATOR_REQUEST_ID" expression="get-property('operatorRequestId')" action="set" scope="default"/>
 
-    <property name="smsRetrieveResourceUrl" expression="fn:concat(syn:get-property('SEND_SMS_RESOURCE_URL_PREFIX'), '/', syn:get-property('ENCODED_SENDER_ADDRESS'), '/requests/', syn:get-property('REQUEST_ID'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+    <property name="smsRetrieveResourceUrl" expression="fn:concat(syn:get-property('SEND_SMS_RESOURCE_URL_PREFIX'), '/requests/', syn:get-property('REQUEST_ID'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
     <property name="smsDeliveryInfoResourceUrl" expression="fn:concat(syn:get-property('smsRetrieveResourceUrl'), '/deliveryInfos')" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
 
-    <filter source="boolean(get-property('originalNotifyURL'))" regex="false">
+    <filter source="boolean(get-property('originalNotifyURL'))" regex="true">
         <then>
             <class name="com.wso2telco.dep.common.mediation.UtilMediator">
                 <property name="propertyValue" value="singlePropertyReplacement"/>
-                <property name="propertyName" value="smsReceiptRequestNotifyUrl"/>
+                <property name="propertyName" value="notifyURL"/>
                 <property name="propertyPath" value="payload.outboundSMSMessageRequest.receiptRequest.notifyURL"/>
                 <property name="msgContextProperty" value="originalNotifyURL"/>
             </class>
@@ -36,7 +36,7 @@
 
     <class name="com.wso2telco.dep.common.mediation.UtilMediator">
         <property name="propertyValue" value="singlePropertyReplacement"/>
-        <property name="propertyName" value="smsDeliveryInfoResourceUrl"/>
+        <property name="propertyName" value="resourceURL"/>
         <property name="propertyPath" value="payload.outboundSMSMessageRequest.deliveryInfoList.resourceURL"/>
         <property name="msgContextProperty" value="smsDeliveryInfoResourceUrl"/>
     </class>

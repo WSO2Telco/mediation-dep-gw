@@ -16,7 +16,7 @@
 
 			<class name="com.wso2telco.dep.common.mediation.UtilMediator">
 				<property name="propertyValue" value="propertyReplacementInArray"/>
-				<property name="propertyName" value="resourceURL"/>
+				<property name="propertyName" value="amountTransaction"/>
 				<property name="propertyPath" value="payload.paymentTransactionList.amountTransaction"/>
 				<property name="msgContextProperty" value="propertyReplacement"/>
 			</class>

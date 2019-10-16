@@ -27,7 +27,7 @@
 
             <class name="com.wso2telco.dep.common.mediation.UtilMediator">
                 <property name="propertyValue" value="propertyReplacementInArray"/>
-                <property name="propertyName" value="resourceURL"/>
+                <property name="propertyName" value="inboundSMSMessage"/>
                 <property name="propertyPath" value="payload.inboundSMSMessageList.inboundSMSMessage"/>
                 <property name="msgContextProperty" value="propertyReplacement"/>
             </class>

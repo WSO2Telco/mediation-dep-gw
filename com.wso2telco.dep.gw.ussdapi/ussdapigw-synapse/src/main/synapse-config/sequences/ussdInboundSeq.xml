@@ -4,11 +4,11 @@
     <header expression="get-property('ENDPOINT')" name="To" scope="default"/>
     <property name="responseRequest" expression="json-eval($.inboundUSSDMessageRequest.responseRequest)"/>
 
-    <filter source="boolean(get-property('responseRequest'))" regex="false">
+    <filter source="boolean(get-property('responseRequest'))" regex="true">
         <then>
             <class name="com.wso2telco.dep.common.mediation.UtilMediator">
                 <property name="propertyValue" value="singlePropertyReplacement"/>
-                <property name="propertyName" value="spEndpoint"/>
+                <property name="propertyName" value="notifyURL"/>
                 <property name="propertyPath" value="payload.inboundUSSDMessageRequest.responseRequest.notifyURL"/>
                 <property name="msgContextProperty" value="spEndpoint"/>
             </class>
