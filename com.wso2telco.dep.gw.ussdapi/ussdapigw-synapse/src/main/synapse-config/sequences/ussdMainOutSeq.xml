@@ -22,7 +22,7 @@
                                     expression="get-property('operator')" type="VARCHAR"/>
                         </statement>
                     </dbreport>
-                    <sequence key="modifyUSSDResponseSeq"/>
+                    <sequence key="modifyUSSDSubscriptionResponsePayloadSeq"/>
                 </case>
                 <default/>
             </switch>

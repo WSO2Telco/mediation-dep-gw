@@ -11,9 +11,7 @@
                 <then>
                     <property name="resourceUrlPrefix" expression="get-property('gatewayResourceUrlPrefix')"/>
                 </then>
-                <else>
-                    <!-- throw an error-->
-                </else>
+                <else/>
             </filter>
         </else>
     </filter>
@@ -23,22 +21,22 @@
             <property name="messageId" expression="//inboundSMSMessage/messageId"/>
             <property name="registrationId" expression="//inboundSMSMessage/destinationAddress"/>
             <property name="propertyReplacementIndex" expression="get-property('foreach_messages_FOREACH_COUNTER')" scope="default"/>
-            <property name="propertyReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), '/', syn:get-property('registrationId'), '/', syn:get-property('requestId'), '/', syn:get-property('messageId'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions" />
+            <property name="inboundSMSMessageReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), '/', syn:get-property('registrationId'), '/', syn:get-property('requestId'), '/', syn:get-property('messageId'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions" />
 
             <class name="com.wso2telco.dep.common.mediation.UtilMediator">
                 <property name="propertyValue" value="propertyReplacementInArray"/>
                 <property name="propertyName" value="inboundSMSMessage"/>
                 <property name="propertyPath" value="payload.inboundSMSMessageList.inboundSMSMessage"/>
-                <property name="msgContextProperty" value="propertyReplacement"/>
+                <property name="msgContextProperty" value="inboundSMSMessageReplacement"/>
             </class>
         </sequence>
     </foreach>
 
-    <property name="propertyReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), '/', syn:get-property('registrationId'), '/', syn:get-property('requestId'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions" />
+    <property name="resourceURLReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), '/', syn:get-property('registrationId'), '/', syn:get-property('requestId'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions" />
     <class name="com.wso2telco.dep.common.mediation.UtilMediator">
         <property name="propertyValue" value="singlePropertyReplacement"/>
         <property name="propertyName" value="resourceURL"/>
         <property name="propertyPath" value="inboundSMSMessageList.resourceURL"/>
-        <property name="msgContextProperty" value="propertyReplacement"/>
+        <property name="msgContextProperty" value="resourceURLReplacement"/>
     </class>
 </sequence>

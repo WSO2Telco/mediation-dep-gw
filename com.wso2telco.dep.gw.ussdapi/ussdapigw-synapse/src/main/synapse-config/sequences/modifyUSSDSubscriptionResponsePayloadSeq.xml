@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sequence name="modifyUSSDResponseSeq" xmlns="http://ws.apache.org/ns/synapse">
+<sequence name="modifyUSSDSubscriptionResponsePayloadSeq" xmlns="http://ws.apache.org/ns/synapse">
 
-    <property name="propertyReplacement"
+    <property name="resourceURLReplacement"
               expression="fn:concat(syn:get-property('hubGateway'), syn:get-property('REST_API_CONTEXT'), '/', syn:get-property('VERSION'), syn:get-property('REST_SUB_REQUEST_PATH'), '/', syn:get-property('subscriptionID'))"
               scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
 
@@ -9,7 +9,7 @@
         <property name="propertyValue" value="singlePropertyReplacement"/>
         <property name="propertyName" value="resourceURL"/>
         <property name="propertyPath" value="payload.subscription.resourceURL"/>
-        <property name="msgContextProperty" value="propertyReplacement"/>
+        <property name="msgContextProperty" value="resourceURLReplacement"/>
     </class>
 
     <class name="com.wso2telco.dep.common.mediation.UtilMediator">

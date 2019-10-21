@@ -11,14 +11,14 @@
 	<foreach id="foreach_transactions" expression="//paymentTransactionList/amountTransaction">
 		<sequence>
             <property name="serverReferenceCode" expression="//amountTransaction/serverReferenceCode"/>
-            <property name="propertyReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), syn:get-property('serverReferenceCode'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+            <property name="amountTransactionReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), syn:get-property('serverReferenceCode'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
             <property name="propertyReplacementIndex" expression="get-property('foreach_transactions_FOREACH_COUNTER')" scope="default"/>
 
 			<class name="com.wso2telco.dep.common.mediation.UtilMediator">
 				<property name="propertyValue" value="propertyReplacementInArray"/>
 				<property name="propertyName" value="amountTransaction"/>
 				<property name="propertyPath" value="payload.paymentTransactionList.amountTransaction"/>
-				<property name="msgContextProperty" value="propertyReplacement"/>
+				<property name="msgContextProperty" value="amountTransactionReplacement"/>
 			</class>
 		</sequence>
 	</foreach>
