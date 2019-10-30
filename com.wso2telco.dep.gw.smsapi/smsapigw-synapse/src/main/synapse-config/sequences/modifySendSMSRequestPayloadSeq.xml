@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="modifySendSMSRequestPayloadSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
         <property expression="json-eval($.outboundSMSMessageRequest.receiptRequest.notifyURL)" name="originalNotifyURL" scope="default" type="STRING"/>
-        <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-                <property name="script" value='
-                        var payload= mc.getPayloadJSON();
-                        payload.outboundSMSMessageRequest.receiptRequest.notifyURL = String(mc.getProperty("notifyURL"));
-                        var stringifiedPayload = JSON.stringify(payload);
-                        mc.setPayloadJSON(stringifiedPayload);
-        '/>
+
+        <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+                <property name="propertyValue" value="singlePropertyReplacement"/>
+                <property name="propertyName" value="notifyURL"/>
+                <property name="propertyPath" value="payload.outboundSMSMessageRequest.receiptRequest.notifyURL"/>
+                <property name="msgContextProperty" value="notifyURL"/>
         </class>
 </sequence>

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="modifySendUSSDResponsePayloadSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-        <property name="script" value='
-            var payload= mc.getPayloadJSON();
-            var str = mc.getProperty("outboundUSSDMessage");
-            var text = str.replace("\n", "\\n").replace("\r", "\\r");
-            payload.outboundUSSDMessageRequest.outboundUSSDMessage = text;
-            payload.outboundUSSDMessageRequest.responseRequest.notifyURL = mc.getProperty("originalNotifyURL");
-            mc.setPayloadJSON(payload);
-          '/>
+
+    <property expression="fn:replace(fn:replace(syn:get-property('outboundUSSDMessage'), '\n', '\\n'), '\r', '\\r')" name="outboundUSSDMessageReplacement" scope="default" type="STRING" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+
+    <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+        <property name="propertyValue" value="singlePropertyReplacement"/>
+        <property name="propertyName" value="outboundUSSDMessage"/>
+        <property name="propertyPath" value="payload.outboundUSSDMessageRequest.outboundUSSDMessage"/>
+        <property name="msgContextProperty" value="outboundUSSDMessageReplacement"/>
+    </class>
+
+    <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+        <property name="propertyValue" value="singlePropertyReplacement"/>
+        <property name="propertyName" value="notifyURL"/>
+        <property name="propertyPath" value="payload.outboundUSSDMessageRequest.responseRequest.notifyURL"/>
+        <property name="msgContextProperty" value="originalNotifyURL"/>
     </class>
 </sequence>

@@ -20,9 +20,9 @@
 		<file>src/main/synapse-config/endpoints/ussdInboundSeqEndpoint.xml</file>
 	</artifact>
 
-	<artifact name="ModifyUSSDResponseSeq" groupId="com.wso2telco.dep.gw.sequence"
+	<artifact name="ModifyUSSDSubscriptionResponsePayloadSeq" groupId="com.wso2telco.dep.gw.sequence"
 		version="3.0.0-SNAPSHOT" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-		<file>src/main/synapse-config/sequences/modifyUSSDResponseSeq.xml</file>
+		<file>src/main/synapse-config/sequences/modifyUSSDSubscriptionResponsePayloadSeq.xml</file>
 	</artifact>
 
 	<artifact name="SendUssdSeq" groupId="com.wso2telco.dep.gw.sequence"

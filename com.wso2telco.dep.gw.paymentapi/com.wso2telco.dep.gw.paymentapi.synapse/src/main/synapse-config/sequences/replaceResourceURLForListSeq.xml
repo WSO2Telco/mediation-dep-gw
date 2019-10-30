@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="replaceResourceURLForListSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-	<class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-	    <property name="script" value="
-	        var payload= mc.getPayloadJSON();
-        var hubGateway = mc.getProperty('hubGateway').trim();
-    	var requestResourceUrl = mc.getProperty('requestResourceUrl').trim();
-	        var resourceUrlPrefix = hubGateway + requestResourceUrl + 'amount/';
-    	var transactions = payload.paymentTransactionList.amountTransaction;
+	<property name="resourceUrlPrefix" expression="fn:concat(syn:get-property('hubGateway'), syn:get-property('requestResourceUrl'), '/amount/')" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+    <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+        <property name="propertyValue" value="singlePropertyReplacement"/>
+        <property name="propertyName" value="resourceURL"/>
+        <property name="propertyPath" value="payload.paymentTransactionList.resourceURL"/>
+        <property name="msgContextProperty" value="resourceUrlPrefix"/>
+    </class>
 
-        for ( var i in transactions) {
-            transactions[i].resourceURL = resourceUrlPrefix + transactions[i].serverReferenceCode;
-        }
+	<foreach id="foreach_transactions" expression="//paymentTransactionList/amountTransaction">
+		<sequence>
+            <property name="serverReferenceCode" expression="//amountTransaction/serverReferenceCode"/>
+            <property name="amountTransactionReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), syn:get-property('serverReferenceCode'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+            <property name="propertyReplacementIndex" expression="get-property('foreach_transactions_FOREACH_COUNTER')" scope="default"/>
 
-        payload.paymentTransactionList.resourceURL = resourceUrlPrefix;
-            print(payload);
-	        mc.setPayloadJSON(payload);
-	    "/>
-	</class>
+			<class name="com.wso2telco.dep.common.mediation.UtilMediator">
+				<property name="propertyValue" value="propertyReplacementInArray"/>
+				<property name="propertyName" value="amountTransaction"/>
+				<property name="propertyPath" value="payload.paymentTransactionList.amountTransaction"/>
+				<property name="msgContextProperty" value="amountTransactionReplacement"/>
+			</class>
+		</sequence>
+	</foreach>
 </sequence>

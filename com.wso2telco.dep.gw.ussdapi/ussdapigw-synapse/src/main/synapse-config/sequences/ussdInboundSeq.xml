@@ -2,15 +2,19 @@
 <sequence name="ussdInboundSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
     <property name="REST_URL_POSTFIX" action="remove" scope="axis2"/>
     <header expression="get-property('ENDPOINT')" name="To" scope="default"/>
-    <class name="org.wso2telco.dep.nashornmediator.NashornMediator">
-        <property name="script" value='
-            var payload= mc.getPayloadJSON();
-            if(payload.inboundUSSDMessageRequest.responseRequest){
-            payload.inboundUSSDMessageRequest.responseRequest.notifyURL = mc.getProperty("spEndpoint");
-            }
-            mc.setPayloadJSON(payload);
-        '/>
-    </class>
+    <property name="responseRequest" expression="json-eval($.inboundUSSDMessageRequest.responseRequest)"/>
+
+    <filter source="boolean(get-property('responseRequest'))" regex="true">
+        <then>
+            <class name="com.wso2telco.dep.common.mediation.UtilMediator">
+                <property name="propertyValue" value="singlePropertyReplacement"/>
+                <property name="propertyName" value="notifyURL"/>
+                <property name="propertyPath" value="payload.inboundUSSDMessageRequest.responseRequest.notifyURL"/>
+                <property name="msgContextProperty" value="spEndpoint"/>
+            </class>
+        </then>
+    </filter>
+
     <header name="Accept" value="application/json" scope="transport"/>
 
     <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
