@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="replaceResourceURLForListSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-	<property name="resourceUrlPrefix" expression="fn:concat(syn:get-property('hubGateway'), syn:get-property('requestResourceUrl'), '/amount/')" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+	<property name="resourceUrlPrefix" expression="fn:concat(get-property('hubGateway'), get-property('requestResourceUrl'), '/amount/')" scope="default" />
     <class name="com.wso2telco.dep.common.mediation.UtilMediator">
         <property name="propertyValue" value="singlePropertyReplacement"/>
         <property name="propertyName" value="resourceURL"/>
@@ -11,7 +11,7 @@
 	<foreach id="foreach_transactions" expression="//paymentTransactionList/amountTransaction">
 		<sequence>
             <property name="serverReferenceCode" expression="//amountTransaction/serverReferenceCode"/>
-            <property name="amountTransactionReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), syn:get-property('serverReferenceCode'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+            <property name="amountTransactionReplacement" expression="fn:concat(get-property('resourceUrlPrefix'), get-property('serverReferenceCode'))" scope="default" />
             <property name="propertyReplacementIndex" expression="get-property('foreach_transactions_FOREACH_COUNTER')" scope="default"/>
 
 			<class name="com.wso2telco.dep.common.mediation.UtilMediator">

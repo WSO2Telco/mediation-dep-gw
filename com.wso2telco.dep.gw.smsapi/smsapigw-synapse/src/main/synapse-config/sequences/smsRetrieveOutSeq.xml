@@ -21,7 +21,7 @@
             <property name="messageId" expression="//inboundSMSMessage/messageId"/>
             <property name="registrationId" expression="//inboundSMSMessage/destinationAddress"/>
             <property name="propertyReplacementIndex" expression="get-property('foreach_messages_FOREACH_COUNTER')" scope="default"/>
-            <property name="inboundSMSMessageReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), '/', syn:get-property('registrationId'), '/', syn:get-property('requestId'), '/', syn:get-property('messageId'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions" />
+            <property name="inboundSMSMessageReplacement" expression="fn:concat(get-property('resourceUrlPrefix'), '/', get-property('registrationId'), '/', get-property('requestId'), '/', get-property('messageId'))" scope="default"  />
 
             <class name="com.wso2telco.dep.common.mediation.UtilMediator">
                 <property name="propertyValue" value="propertyReplacementInArray"/>
@@ -32,7 +32,7 @@
         </sequence>
     </foreach>
 
-    <property name="resourceURLReplacement" expression="fn:concat(syn:get-property('resourceUrlPrefix'), '/', syn:get-property('registrationId'), '/', syn:get-property('requestId'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions" />
+    <property name="resourceURLReplacement" expression="fn:concat(get-property('resourceUrlPrefix'), '/', get-property('registrationId'), '/', get-property('requestId'))" scope="default"  />
     <class name="com.wso2telco.dep.common.mediation.UtilMediator">
         <property name="propertyValue" value="singlePropertyReplacement"/>
         <property name="propertyName" value="resourceURL"/>
