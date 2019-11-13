@@ -11,7 +11,7 @@
     </filter>
     <filter source="boolean(get-property('originalNotifyURL'))" regex="false">
         <then>
-            <property expression="fn:replace(fn:replace(syn:get-property('outboundUSSDMessage'), '\n', '\\n'), '\r', '\\r')" name="outboundUSSDMessageReplacement" scope="default" type="STRING" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+            <property expression="fn:translate(fn:translate(get-property('outboundUSSDMessage'), '\n', '\\n'), '\r', '\\r')" name="outboundUSSDMessageReplacement" scope="default" type="STRING" />
 
             <class name="com.wso2telco.dep.common.mediation.UtilMediator">
                 <property name="propertyValue" value="singlePropertyReplacement"/>

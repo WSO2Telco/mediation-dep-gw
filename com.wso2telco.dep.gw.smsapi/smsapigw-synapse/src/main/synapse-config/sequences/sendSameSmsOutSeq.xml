@@ -2,7 +2,7 @@
 <sequence name="sendSameSmsOutSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
 
     <property name="responseResourceUrl" expression="json-eval($.outboundSMSMessageRequest.resourceURL)"/>
-    <property name="operatorRequestId" expression="fn:replace(syn:get-property('responseResourceUrl'), '^.*/', '')" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+    <property name="operatorRequestId" expression="fn:substring-after(get-property('responseResourceUrl'), '/requests/')" />
     <filter source="boolean(get-property('operatorRequestId'))" regex="false">
         <then>
             <log level="custom">
@@ -15,8 +15,8 @@
 		
     <class name="com.wso2telco.dep.mediator.impl.smsmessaging.SendSMSRequestIdGetMediator"/>
 
-    <property name="smsRetrieveResourceUrl" expression="fn:concat(syn:get-property('SEND_SMS_RESOURCE_URL_PREFIX'), '/', syn:get-property('ENCODED_SENDER_ADDRESS'), '/requests/', syn:get-property('PERSISTED_REQUEST_ID'))" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
-    <property name="smsDeliveryInfoResourceUrl" expression="fn:concat(syn:get-property('smsRetrieveResourceUrl'), '/deliveryInfos')" scope="default" xmlns:fn="http://www.w3.org/2005/xpath-functions"/>
+    <property name="smsRetrieveResourceUrl" expression="fn:concat(get-property('SEND_SMS_RESOURCE_URL_PREFIX'), '/', get-property('ENCODED_SENDER_ADDRESS'), '/requests/', get-property('PERSISTED_REQUEST_ID'))" scope="default" />
+    <property name="smsDeliveryInfoResourceUrl" expression="fn:concat(get-property('smsRetrieveResourceUrl'), '/deliveryInfos')" scope="default" />
 
     <filter source="boolean(get-property('originalNotifyURL'))" regex="true">
         <then>
