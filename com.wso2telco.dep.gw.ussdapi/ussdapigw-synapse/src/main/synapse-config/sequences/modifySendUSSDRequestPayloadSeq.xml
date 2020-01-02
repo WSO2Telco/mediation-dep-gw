@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="modifySendUSSDRequestPayloadSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <!--  Due to EXTGW-432
+    
     <property expression="json-eval($.outboundUSSDMessageRequest.responseRequest.notifyURL)" name="originalNotifyURL"
               scope="default" type="STRING"/>
+              
+    -->
     <property expression="fn:translate(fn:translate(get-property('outboundUSSDMessage'), '\n', '\\n'), '\r', '\\r')" name="outboundUSSDMessageReplacement" scope="default" type="STRING" />
 
     <class name="com.wso2telco.dep.common.mediation.UtilMediator">
