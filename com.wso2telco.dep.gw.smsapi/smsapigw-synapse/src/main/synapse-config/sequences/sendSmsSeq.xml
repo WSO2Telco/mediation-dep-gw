@@ -14,6 +14,17 @@
         </else>
     </filter>
 
+	<filter xpath="boolean($ctx:MSISDN_LIST)">
+        <then>
+            <!-- validate the msisdn list for black list and white list -->
+            <call-template target="com.wso2telco.dep.common.blacklistWhitelistValidator.Template">
+                <with-param name="paramName" value="address"/>
+                <with-param name="paramValueList" value="{get-property('MSISDN_LIST')}"/>
+            </call-template>
+        </then>
+        <else/>
+    </filter>
+
     <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
         <with-param name="direction" value="REQUESTOUT"/>
     </call-template>
