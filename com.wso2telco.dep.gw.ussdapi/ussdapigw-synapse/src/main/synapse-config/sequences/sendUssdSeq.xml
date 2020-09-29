@@ -11,13 +11,10 @@
     </filter>
     <filter source="boolean(get-property('originalNotifyURL'))" regex="false">
         <then>
-            <property expression="fn:translate(fn:translate(get-property('outboundUSSDMessage'), '\n', '\\n'), '\r', '\\r')" name="outboundUSSDMessageReplacement" scope="default" type="STRING" />
-
             <class name="com.wso2telco.dep.common.mediation.UtilMediator">
-                <property name="propertyValue" value="singlePropertyReplacement"/>
+                <property name="propertyValue" value="replaceNewLineCharacters"/>
                 <property name="propertyName" value="outboundUSSDMessage"/>
                 <property name="propertyPath" value="payload.outboundUSSDMessageRequest.outboundUSSDMessage"/>
-                <property name="msgContextProperty" value="outboundUSSDMessageReplacement"/>
             </class>
         </then>
         <else/>
