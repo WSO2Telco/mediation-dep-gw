@@ -8,18 +8,5 @@
         <property name="msgContextProperty" value="resourceUrlPrefix"/>
     </class>
 
-	<foreach id="foreach_transactions" expression="//paymentTransactionList/amountTransaction">
-		<sequence>
-            <property name="serverReferenceCode" expression="//amountTransaction/serverReferenceCode"/>
-            <property name="amountTransactionReplacement" expression="fn:concat(get-property('resourceUrlPrefix'), get-property('serverReferenceCode'))" scope="default" />
-            <property name="propertyReplacementIndex" expression="get-property('foreach_transactions_FOREACH_COUNTER')" scope="default"/>
-
-			<class name="com.wso2telco.dep.common.mediation.UtilMediator">
-				<property name="propertyValue" value="propertyReplacementInArray"/>
-				<property name="propertyName" value="amountTransaction"/>
-				<property name="propertyPath" value="payload.paymentTransactionList.amountTransaction"/>
-				<property name="msgContextProperty" value="amountTransactionReplacement"/>
-			</class>
-		</sequence>
-	</foreach>
+	<class name="com.wso2telco.dep.common.mediation.PaymentListProcessMediator"/>
 </sequence>
