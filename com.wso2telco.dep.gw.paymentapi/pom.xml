@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.wso2telco.dep.gw</groupId>
     <artifactId>mediation-dep-gw</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
