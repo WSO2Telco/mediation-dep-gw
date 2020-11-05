@@ -5,12 +5,12 @@
   <parent>
     <groupId>com.wso2telco.dep.gw</groupId>
     <artifactId>com.wso2telco.dep.gw.ussdapi</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.wso2telco.dep.gw</groupId>
   <artifactId>ussdapigw_capp</artifactId>
-  <version>3.0.0-SNAPSHOT</version>
+  <version>3.0.0</version>
   <packaging>carbon/application</packaging>
   <name>ussdapigw_capp</name>
   <description>ussdapigw_capp</description>
@@ -35,86 +35,86 @@
     <dependency>
       <groupId>com.wso2telco.dep.gw.api</groupId>
       <artifactId>ussdAPI</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>DefaultUSSDEndpoint</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>SendUssdSeqEndpoint</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.endpoint</groupId>
       <artifactId>USSDInboundSeqEndpoint</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>ModifyUSSDSubscriptionResponsePayloadSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
 
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>SendUssdSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>USSDInboundResponseSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>USSDInboundSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>USSDMOStopSubscriptionSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>USSDMOSubscribeSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>USSDMainOutSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>USSDMainSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>ModifySendUSSDRequestPayloadSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
    <dependency>
       <groupId>com.wso2telco.dep.gw.sequence</groupId>
       <artifactId>ModifySendUSSDResponsePayloadSeq</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
       <type>xml</type>
     </dependency>
   </dependencies>
