@@ -7,6 +7,7 @@
       <with-param name="direction" value="REQUESTOUT"/>
     </call-template>
 
+    <sequence key="com.wso2telco.dep.common.change.header.name"/>
     <header expression="get-property('ENDPOINT')" name="To" scope="default"/>
     <call>
         <endpoint key="smsQueryDeliveryStatusEndpoint"/>

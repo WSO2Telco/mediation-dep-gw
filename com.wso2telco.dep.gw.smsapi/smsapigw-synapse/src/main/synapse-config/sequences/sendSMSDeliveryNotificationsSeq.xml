@@ -6,7 +6,7 @@
     <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
         <with-param name="direction" value="REQUESTOUT"/>
     </call-template>
-
+    <sequence key="com.wso2telco.dep.common.change.header.name"/>
     <call>
         <endpoint key="smsInboundNotificationEp"/>
     </call>
