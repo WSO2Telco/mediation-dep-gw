@@ -4,10 +4,10 @@
   <header name="Accept" scope="transport" value="application/json"/>
   <header name="Accept-Charset" scope="transport" value="UTF-8"/>
   <header name="sandbox" scope="transport" value="admin"/>
-  <header expression="get-property('auth-header')" name="Authorization"
+  <!--header expression="get-property('auth-header')" name="Authorization"
     scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
   <header expression="get-property('jwt-header')" name="x-jwt-assertion"
-    scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/>
+    scope="transport" xmlns:ns="http://org.apache.synapse/xsd"/-->
 
   <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
       <with-param name="direction" value="REQUESTOUT"/>
